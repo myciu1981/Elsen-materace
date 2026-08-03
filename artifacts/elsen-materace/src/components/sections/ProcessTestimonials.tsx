@@ -42,11 +42,11 @@ export default function ProcessTestimonials() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
               {steps.map((step, i) => (
                 <div key={i} className="relative group p-6 border border-transparent hover:border-white/5 hover:bg-background/50 rounded-sm transition-all duration-300">
-                  <div className="text-7xl font-serif text-white/5 mb-6 group-hover:text-primary/10 transition-colors">
+                  <div className="text-7xl font-serif text-primary/35 mb-6 group-hover:text-primary/55 transition-colors">
                     {step.num}
                   </div>
                   <h3 className="text-xl font-serif text-primary mb-4">{step.title}</h3>
-                  <p className="text-muted-foreground font-light leading-relaxed">
+                  <p className="text-muted-foreground font-normal leading-relaxed">
                     {step.desc}
                   </p>
                   

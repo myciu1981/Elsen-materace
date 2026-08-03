@@ -24,7 +24,7 @@ export default function AboutOffer() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl text-foreground mb-8">Witaj w ELSEN Materace</h2>
-            <div className="space-y-6 text-muted-foreground text-lg font-light leading-relaxed">
+            <div className="space-y-6 text-muted-foreground text-lg font-normal leading-relaxed">
               <p>
                 W ELSEN wierzymy, że dobry sen to podstawa dobrego życia. Dlatego każdy materac
                 tworzymy z dbałością o najmniejszy detal — tak, aby zapewnić trwałość, wygodę
@@ -81,13 +81,13 @@ export default function AboutOffer() {
                   <f.icon className="text-primary w-6 h-6" strokeWidth={1.5} />
                 </div>
                 <h3 className="text-xl text-foreground mb-3">{f.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed font-light">{f.desc}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed font-normal">{f.desc}</p>
               </motion.div>
             ))}
           </div>
 
           <div className="max-w-4xl mx-auto bg-card border border-white/5 p-8 md:p-12 rounded-sm shadow-xl">
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 text-muted-foreground text-sm md:text-base font-light">
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 text-muted-foreground text-sm md:text-base font-normal">
               {[
                 'Materace premium — wykonywane pojedynczo, nie z magazynu',
                 'Wszystkie rozmiary — również na indywidualne zamówienie',

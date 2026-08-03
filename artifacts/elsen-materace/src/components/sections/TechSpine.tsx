@@ -18,7 +18,7 @@ export default function TechSpine() {
             className="mb-16 text-center max-w-3xl mx-auto"
           >
             <h2 className="text-4xl md:text-5xl text-foreground mb-6">Twój komfort, nasza jakość</h2>
-            <p className="text-muted-foreground text-lg font-light leading-relaxed">
+            <p className="text-muted-foreground text-lg font-normal leading-relaxed">
               Oferujemy materace w standardowych rozmiarach oraz wykonujemy materace na indywidualne
               zamówienie. Poniżej to, co znajdziesz w środku.
             </p>
@@ -28,7 +28,7 @@ export default function TechSpine() {
             <div className="space-y-8">
               <div className="bg-background border border-white/5 p-8 md:p-10 rounded-sm">
                 <h3 className="text-2xl text-primary mb-4">Sprężyny kieszeniowe</h3>
-                <p className="text-muted-foreground leading-relaxed font-light">
+                <p className="text-muted-foreground leading-relaxed font-normal">
                   Każda sprężyna pracuje niezależnie i jest wykonana ze stali wysokiej jakości,
                   która nie odkształca się przez lata i nie pęka. Dzięki temu materac podpiera
                   ciało punktowo, a ruch drugiej osoby nie przenosi się na Twoją stronę łóżka.
@@ -36,7 +36,7 @@ export default function TechSpine() {
               </div>
               <div className="bg-background border border-white/5 p-8 md:p-10 rounded-sm">
                 <h3 className="text-2xl text-primary mb-4">Pianki wysokiej gęstości</h3>
-                <p className="text-muted-foreground leading-relaxed font-light">
+                <p className="text-muted-foreground leading-relaxed font-normal">
                   Używamy wyłącznie pianek o wysokiej gęstości, w kilku wariantach dobieranych do
                   wagi. To one decydują o tym, czy materac po roku zrobi dolinę, czy utrzyma kształt
                   przez lata.
@@ -44,7 +44,7 @@ export default function TechSpine() {
               </div>
               <div className="bg-background border border-white/5 p-8 md:p-10 rounded-sm">
                 <h3 className="text-2xl text-primary mb-4">Pokrowiec z atestem</h3>
-                <p className="text-muted-foreground leading-relaxed font-light">
+                <p className="text-muted-foreground leading-relaxed font-normal">
                   Tkanina materacowa najwyższej jakości, z atestem higienicznym. To jedyna warstwa,
                   której dotykasz przez całą noc — dlatego nie oszczędzamy na niej.
                 </p>
@@ -88,9 +88,9 @@ export default function TechSpine() {
               <h2 className="text-4xl md:text-5xl text-foreground mb-4">
                 Właściwe podparcie kręgosłupa
               </h2>
-              <h3 className="text-2xl text-primary mb-10 italic font-light">Odcinek lędźwiowy</h3>
+              <h3 className="text-2xl text-primary mb-10 italic font-normal">Odcinek lędźwiowy</h3>
 
-              <div className="space-y-6 text-muted-foreground text-lg font-light leading-relaxed mb-12">
+              <div className="space-y-6 text-muted-foreground text-lg font-normal leading-relaxed mb-12">
                 <p>
                   Materac Elsen dopasowuje się do naturalnych krzywizn ciała, zapewniając właściwe
                   podparcie odcinka lędźwiowego. Budź się wypoczęty.

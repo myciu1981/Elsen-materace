@@ -98,7 +98,7 @@ export default function QuoteContact() {
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-serif text-foreground mb-6">Zapytaj o wycenę</h2>
-              <p className="text-lg text-muted-foreground font-light leading-relaxed">
+              <p className="text-lg text-muted-foreground font-normal leading-relaxed">
                 Zadzwoń lub napisz — a my doradzimy. Wycena jest bezpłatna i do niczego nie zobowiązuje. Odpowiadamy zwykle w ciągu kilku godzin, najpóźniej w 24 godziny.
               </p>
             </div>
@@ -167,7 +167,7 @@ export default function QuoteContact() {
                   className="mt-1"
                 />
                 <div className="grid gap-2 leading-none">
-                  <Label htmlFor="rodo" className="text-xs font-light text-muted-foreground leading-relaxed cursor-pointer select-none">
+                  <Label htmlFor="rodo" className="text-xs font-normal text-muted-foreground leading-relaxed cursor-pointer select-none">
                     Wyrażam zgodę na przetwarzanie moich danych osobowych w celu przygotowania wyceny i kontaktu w tej sprawie. 
                     Administratorem danych jest [NAZWA FIRMY], [ADRES], NIP [NIP]. Dane przetwarzamy wyłącznie w celu odpowiedzi na Twoje zapytanie, na podstawie Twojej zgody. Przechowujemy je przez 12 miesięcy od ostatniego kontaktu. Masz prawo dostępu do danych, ich poprawienia, usunięcia oraz wycofania zgody w dowolnym momencie. Szczegóły w <Link href="/polityka-prywatnosci" className="text-primary hover:underline">polityce prywatności</Link>.
                   </Label>
@@ -194,7 +194,7 @@ export default function QuoteContact() {
       <section className="py-24 md:py-32 bg-background text-center relative overflow-hidden">
         <div className="container mx-auto px-6 md:px-12 relative z-10">
           <h2 className="text-4xl md:text-5xl font-serif text-foreground mb-6">Zapraszamy do kontaktu</h2>
-          <p className="text-lg text-muted-foreground font-light mb-16 max-w-xl mx-auto">
+          <p className="text-lg text-muted-foreground font-normal mb-16 max-w-xl mx-auto">
             Pomożemy dobrać materac idealnie dopasowany do Twoich potrzeb.
           </p>
 

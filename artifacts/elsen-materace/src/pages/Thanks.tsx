@@ -14,7 +14,7 @@ export default function Thanks() {
         <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-[80px] pointer-events-none -translate-y-1/2 translate-x-1/2" />
         
         <h1 className="text-4xl md:text-5xl font-serif text-primary mb-6 relative z-10">Dziękujemy za zapytanie</h1>
-        <p className="text-lg md:text-xl text-muted-foreground font-light mb-16 relative z-10">
+        <p className="text-lg md:text-xl text-muted-foreground font-normal mb-16 relative z-10">
           Odezwiemy się w ciągu 24 godzin — zwykle znacznie szybciej.
         </p>
 

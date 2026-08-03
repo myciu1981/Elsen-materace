@@ -49,7 +49,7 @@ export default function Hero() {
             z twardością dobraną do Ciebie
           </h1>
 
-          <p className="text-lg md:text-xl text-white/70 mb-12 leading-relaxed max-w-2xl font-light">
+          <p className="text-lg md:text-xl text-white/70 mb-12 leading-relaxed max-w-2xl font-normal">
             Mała manufaktura pod Nowym Tomyślem. Sprężyny kieszeniowe ze stali odpornej na
             odkształcenia, pianki wysokiej gęstości, twardość ustalana z Twojej wagi i sposobu
             spania — nie z etykiety H2 czy H3.
