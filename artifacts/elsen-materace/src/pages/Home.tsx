@@ -11,14 +11,39 @@ import QuoteContact from '@/components/sections/QuoteContact';
 export default function Home() {
   return (
     <>
+      {/* Hero — no scroll-target needed, it's the top */}
       <Hero />
       <TrustBar />
-      <AboutOffer />
-      <TechSpine />
-      <ProcessTestimonials />
+
+      {/* Oferta + O nas */}
+      <div id="oferta">
+        <AboutOffer />
+      </div>
+
+      {/* Co jest w środku + Kręgosłup */}
+      <div id="co-jest-w-srodku">
+        <TechSpine />
+      </div>
+
+      {/* Jak to działa + Opinie */}
+      <div id="jak-to-dziala">
+        <ProcessTestimonials />
+      </div>
+
       <Gallery />
-      <Delivery />
-      <QuoteContact />
+
+      {/* Dostawa */}
+      <div id="dostawa">
+        <Delivery />
+      </div>
+
+      {/* Wycena */}
+      <div id="wycena">
+        <QuoteContact />
+      </div>
+
+      {/* Spacer for mobile bottom nav */}
+      <div className="h-24 md:hidden" aria-hidden="true" />
     </>
   );
 }

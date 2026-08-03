@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap');
 @import 'tailwindcss';
 @import 'tw-animate-css';
 @plugin "@tailwindcss/typography";
@@ -46,8 +46,8 @@
   --ring: 43 55% 48%;
   --radius: 0.375rem;
 
-  --app-font-sans: 'Inter', sans-serif;
-  --app-font-serif: 'Playfair Display', serif;
+  --app-font-sans: 'Montserrat', sans-serif;
+  --app-font-serif: 'Montserrat', sans-serif;
 }
 
 body {
@@ -58,8 +58,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2 {
   font-family: var(--app-font-serif);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+h3, h4, h5, h6 {
+  font-family: var(--app-font-serif);
+  font-weight: 600;
   letter-spacing: 0.02em;
 }
 
