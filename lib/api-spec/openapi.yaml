@@ -10,6 +10,8 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: quote
+    description: Quote request operations
 paths:
   /healthz:
     get:
@@ -24,6 +26,37 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /quote:
+    post:
+      operationId: submitQuote
+      tags: [quote]
+      summary: Submit a quote request
+      description: Sends a quote request email to the company and an optional autoresponder to the customer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/QuoteRequest"
+      responses:
+        "200":
+          description: Quote request received successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/QuoteResponse"
+        "422":
+          description: Validation error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "500":
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
 components:
   schemas:
     HealthStatus:
@@ -33,4 +66,49 @@ components:
           type: string
       required:
         - status
-
+    QuoteRequest:
+      type: object
+      required:
+        - width
+        - length
+      properties:
+        width:
+          type: number
+          description: Mattress width in cm
+          minimum: 1
+          maximum: 999
+        length:
+          type: number
+          description: Mattress length in cm
+          minimum: 1
+          maximum: 999
+        phone:
+          type: ["string", "null"]
+          description: Customer phone number
+        email:
+          type: ["string", "null"]
+          description: Customer email address
+        notes:
+          type: ["string", "null"]
+          description: Additional notes from the customer
+          maxLength: 2000
+        website:
+          type: ["string", "null"]
+          description: Honeypot field — must be empty
+    QuoteResponse:
+      type: object
+      required:
+        - success
+        - message
+      properties:
+        success:
+          type: boolean
+        message:
+          type: string
+    ErrorResponse:
+      type: object
+      required:
+        - error
+      properties:
+        error:
+          type: string

@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "ELSEN Materace"
+description = "Strona marketingowa producenta materacy premium ELSEN Materace z Wielkopolski. Prezentuje ofertę, przekonuje do kontaktu i zbiera zapytania o wycenę przez formularz i WhatsApp."
+version = "1.0.0"
+id = "artifacts/elsen-materace"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22833
+
+[services.development]
+run = "pnpm --filter @workspace/elsen-materace run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/elsen-materace", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/elsen-materace/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22833"
+BASE_PATH = "/"

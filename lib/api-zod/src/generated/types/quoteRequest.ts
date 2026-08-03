@@ -5,9 +5,6 @@
  * API specification
  * OpenAPI spec version: 0.1.0
  */
-export interface HealthStatus {
-  status: string;
-}
 
 export interface QuoteRequest {
   /**
@@ -44,13 +41,3 @@ export interface QuoteRequest {
      */
   website?: string | null;
 }
-
-export interface QuoteResponse {
-  success: boolean;
-  message: string;
-}
-
-export interface ErrorResponse {
-  error: string;
-}
-
