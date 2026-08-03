@@ -57,8 +57,17 @@ export default function Navbar() {
         }`}
       >
         <div className="container mx-auto px-6 md:px-12 flex items-center justify-between w-full">
-          {/* Logo */}
-          <Link href="/" className="flex items-center shrink-0 group">
+          {/* Logo — scrolls to top on home, navigates home elsewhere */}
+          <Link
+            href="/"
+            onClick={(e: React.MouseEvent) => {
+              if (isHome) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }
+            }}
+            className="flex items-center shrink-0 group"
+          >
             <img
               src={logoPath}
               alt="ELSEN Materace"

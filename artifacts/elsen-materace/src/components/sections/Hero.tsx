@@ -5,20 +5,20 @@ import logoPath from '@assets/logo_1785777081436.png';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[95vh] flex items-center pt-20 md:pt-24 overflow-hidden">
+    <section className="relative min-h-screen flex items-center pt-16 md:pt-20 overflow-hidden">
       {/* Background image with lighter overlay */}
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
           alt="Ciemna luksusowa sypialnia z materacem Elsen Premium"
-          className="w-full h-full object-cover object-center scale-105"
+          className="w-full h-full object-cover object-center"
         />
         {/* Reduced opacity gradients to let photo breathe more */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/15" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30" />
       </div>
 
-      <div className="container relative z-10 mx-auto px-6 md:px-12 py-16">
+      <div className="container relative z-10 mx-auto px-6 md:px-12 py-6 md:py-8">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -30,39 +30,39 @@ export default function Hero() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="mb-8"
+            className="mb-4 md:mb-5"
           >
             <img
               src={logoPath}
               alt="ELSEN Materace"
-              className="h-20 md:h-28 object-contain drop-shadow-[0_0_30px_rgba(201,168,76,0.25)]"
+              className="h-14 md:h-20 object-contain drop-shadow-[0_0_30px_rgba(201,168,76,0.25)]"
             />
           </motion.div>
 
-          <div className="text-primary font-semibold tracking-[0.25em] text-xs md:text-sm mb-6 uppercase">
+          <div className="text-primary font-semibold tracking-[0.25em] text-xs mb-4 uppercase">
             KOMFORT, NA KTÓRY ZASŁUGUJESZ
           </div>
 
-          <h1 className="text-4xl md:text-6xl lg:text-7xl text-foreground leading-[1.1] mb-8 drop-shadow-xl">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl text-foreground leading-[1.1] mb-4 drop-shadow-xl">
             Materace szyte ręcznie,{' '}
             <br className="hidden md:block" />
             z twardością dobraną do Ciebie
           </h1>
 
-          <p className="text-lg md:text-xl text-white/70 mb-12 leading-relaxed max-w-2xl font-normal">
+          <p className="text-sm md:text-base text-white/70 mb-5 leading-relaxed max-w-2xl font-normal">
             Mała manufaktura pod Nowym Tomyślem. Sprężyny kieszeniowe ze stali odpornej na
             odkształcenia, pianki wysokiej gęstości, twardość ustalana z Twojej wagi i sposobu
             spania — nie z etykiety H2 czy H3.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-5 mb-12">
+          <div className="flex flex-col sm:flex-row gap-3 mb-5">
             <a
               href="#wycena"
               onClick={(e) => {
                 e.preventDefault();
                 document.querySelector('#wycena')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="inline-flex items-center justify-center h-14 px-8 rounded-sm bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors tracking-wide text-sm"
+              className="inline-flex items-center justify-center h-11 px-7 rounded-sm bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors tracking-wide text-sm"
               data-testid="hero-cta-quote"
             >
               Zapytaj o wycenę
@@ -71,7 +71,7 @@ export default function Hero() {
               href="https://wa.me/48504810841"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center h-14 px-8 rounded-sm border border-primary text-primary font-semibold hover:bg-primary/10 transition-colors tracking-wide text-sm bg-black/20 backdrop-blur-sm"
+              className="inline-flex items-center justify-center h-11 px-7 rounded-sm border border-primary text-primary font-semibold hover:bg-primary/10 transition-colors tracking-wide text-sm bg-black/20 backdrop-blur-sm"
               data-testid="hero-cta-whatsapp"
             >
               Napisz na WhatsApp
