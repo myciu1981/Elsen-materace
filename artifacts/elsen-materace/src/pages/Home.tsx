@@ -2,15 +2,15 @@ import React from 'react';
 import Hero from '@/components/sections/Hero';
 import AboutOffer from '@/components/sections/AboutOffer';
 import TechSpine from '@/components/sections/TechSpine';
-import ProcessTestimonials from '@/components/sections/ProcessTestimonials';
-import Gallery from '@/components/sections/Gallery';
+import ProcessSteps from '@/components/sections/ProcessSteps';
 import Delivery from '@/components/sections/Delivery';
+import Testimonials from '@/components/sections/Testimonials';
+import Gallery from '@/components/sections/Gallery';
 import QuoteContact from '@/components/sections/QuoteContact';
 
 export default function Home() {
   return (
     <>
-      {/* Hero — no scroll-target needed, it's the top */}
       <Hero />
 
       {/* Oferta + O nas */}
@@ -18,9 +18,14 @@ export default function Home() {
         <AboutOffer />
       </div>
 
-      {/* Co jest w środku + Kręgosłup */}
+      {/* Co jest w środku */}
       <div id="co-jest-w-srodku">
         <TechSpine />
+      </div>
+
+      {/* Jak to działa */}
+      <div id="jak-to-dziala">
+        <ProcessSteps />
       </div>
 
       {/* Dostawa */}
@@ -28,10 +33,8 @@ export default function Home() {
         <Delivery />
       </div>
 
-      {/* Jak to działa + Opinie */}
-      <div id="jak-to-dziala">
-        <ProcessTestimonials />
-      </div>
+      {/* Opinie klientów */}
+      <Testimonials />
 
       <Gallery />
 
