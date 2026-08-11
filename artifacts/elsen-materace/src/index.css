@@ -46,6 +46,10 @@
   --ring: 43 55% 48%;
   --radius: 0.375rem;
   --navy: 222 47% 11%;
+  --section-light: 40 30% 95%;
+  --section-light-card: 0 0% 100%;
+  --section-light-foreground: 222 47% 14%;
+  --section-light-muted: 222 20% 35%;
 
   --app-font-sans: 'Montserrat', sans-serif;
   --app-font-serif: 'Montserrat', sans-serif;
