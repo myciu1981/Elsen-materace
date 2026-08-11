@@ -53,12 +53,15 @@ export default function TechSpine() {
               </div>
             </div>
 
-            <div className="h-full overflow-hidden flex items-start">
-              <LightboxImage
-                src={techImage}
-                alt="Przekrój warstw materaca ELSEN"
-                className="w-full h-full object-contain object-top rounded-sm block shadow-2xl"
-              />
+            {/* Relative wrapper — zero intrinsic height so left column drives row height */}
+            <div className="relative">
+              <div className="absolute inset-0 overflow-hidden flex items-start">
+                <LightboxImage
+                  src={techImage}
+                  alt="Przekrój warstw materaca ELSEN"
+                  className="w-full h-full object-contain object-top rounded-sm block shadow-2xl"
+                />
+              </div>
             </div>
           </div>
 
