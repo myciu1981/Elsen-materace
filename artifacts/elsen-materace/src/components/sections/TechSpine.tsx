@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import techImage from '@assets/ChatGPT_Image_3_sie_2026,_08_07_00_1785777081434.png';
-import spineImage from '@assets/ChatGPT_Image_3_sie_2026,_08_00_12_1785777081433.png';
+import techImage from "@assets/ChatGPT_Image_9_sie_2026,_15_21_03_1786410073445.png";
+import spineImage from "@assets/ChatGPT_Image_9_sie_2026,_15_26_21_1786410073446.png";
 import { Activity, ShieldCheck, Heart } from 'lucide-react';
 import { LightboxImage } from '@/components/ui/LightboxImage';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import heroImage from '@assets/ChatGPT_Image_3_sie_2026,_08_01_24_1785777081434.png';
+import heroImage from '@assets/ELSEN_main_1786409153785.png';
 import logoPath from '@assets/logo_1785777081436.png';
 
 export default function Hero() {
@@ -44,7 +44,7 @@ export default function Hero() {
           </div>
 
           <h1 className="text-3xl md:text-4xl lg:text-5xl text-foreground leading-[1.1] mb-4 drop-shadow-xl">
-            Materace szyte ręcznie,{' '}
+            Materace tworzone ręcznie,{' '}
             <br className="hidden md:block" />
             z twardością dobraną do Ciebie
           </h1>

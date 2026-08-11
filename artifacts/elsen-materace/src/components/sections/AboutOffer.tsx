@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Ruler, SlidersHorizontal, Layers, User } from 'lucide-react';
-import aboutImg from '@assets/ChatGPT_Image_3_sie_2026,_07_56_34_1785777081432.png';
+import aboutImg from "@assets/ChatGPT_Image_9_sie_2026,_15_43_58_1786409178370.png";
 import { LightboxImage } from '@/components/ui/LightboxImage';
 
 const features = [
