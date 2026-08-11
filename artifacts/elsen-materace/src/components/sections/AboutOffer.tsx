@@ -115,7 +115,7 @@ export default function AboutOffer() {
                   />
                 </div>
                 <h3 className="text-xl mb-3 min-h-[3.5rem] flex items-start" style={{ color: light.heading }}>{f.title}</h3>
-                <p className="text-sm leading-relaxed font-normal" style={{ color: light.muted }}>{f.desc}</p>
+                <p className="font-normal text-[16px]" style={{ color: light.muted }}>{f.desc}</p>
               </motion.div>
             ))}
           </div>
