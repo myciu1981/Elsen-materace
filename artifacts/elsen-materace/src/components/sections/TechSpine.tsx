@@ -18,10 +18,7 @@ export default function TechSpine() {
             className="mb-16 text-center max-w-3xl mx-auto"
           >
             <h2 className="text-4xl md:text-5xl text-foreground mb-6">Twój komfort, nasza jakość</h2>
-            <p className="text-muted-foreground text-lg font-normal leading-relaxed">
-              Oferujemy materace w standardowych rozmiarach oraz wykonujemy materace na indywidualne
-              zamówienie. Poniżej to, co znajdziesz w środku.
-            </p>
+            <p className="text-muted-foreground text-lg font-normal leading-relaxed">Dobry materac zaczyna się od tego, czego nie widać. Od sprężyn, pianek, materiałów i sposobu, w jaki wszystkie te warstwy ze sobą współpracują. Dlatego nie wybieramy ich przypadkowo.</p>
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
@@ -29,24 +26,29 @@ export default function TechSpine() {
               <div className="bg-background border border-white/5 p-8 md:p-10 rounded-sm">
                 <h3 className="text-2xl text-primary mb-4">Sprężyny kieszeniowe</h3>
                 <p className="text-muted-foreground leading-relaxed font-normal">
-                  Każda sprężyna pracuje niezależnie i jest wykonana ze stali wysokiej jakości,
-                  która nie odkształca się przez lata i nie pęka. Dzięki temu materac podpiera
-                  ciało punktowo, a ruch drugiej osoby nie przenosi się na Twoją stronę łóżka.
+                  Każda sprężyna pracuje niezależnie od pozostałych. Dzięki temu materac reaguje na nacisk dokładnie tam, gdzie jest potrzebny, zamiast uginać się na całej powierzchni.
+                  <br /><br />
+                  To szczególnie ważne, gdy śpią dwie osoby — ruch jednej nie powinien budzić drugiej. Sprężyny wykonujemy z wysokiej jakości stali, która zachowuje swoje właściwości przez lata.
                 </p>
               </div>
               <div className="bg-background border border-white/5 p-8 md:p-10 rounded-sm">
                 <h3 className="text-2xl text-primary mb-4">Pianki wysokiej gęstości</h3>
                 <p className="text-muted-foreground leading-relaxed font-normal">
-                  Używamy wyłącznie pianek o wysokiej gęstości, w kilku wariantach dobieranych do
-                  wagi. To one decydują o tym, czy materac po roku zrobi dolinę, czy utrzyma kształt
-                  przez lata.
+                  Nie każda pianka nadaje się do materaca. Liczy się jej gęstość, sprężystość i odpowiednie dobranie do całej konstrukcji.
+                  <br />
+                  Dlatego korzystamy z pianek o wysokiej gęstości i różnych parametrach. Dobieramy je do konkretnej konstrukcji i wagi użytkownika.
+                  <br /><br />
+                  Bo to właśnie wnętrze materaca decyduje, czy po kilku latach nadal śpisz na materacu, czy zaczynasz szukać w nim swojej własnej doliny.
                 </p>
               </div>
               <div className="bg-background border border-white/5 p-8 md:p-10 rounded-sm">
                 <h3 className="text-2xl text-primary mb-4">Pokrowiec z atestem</h3>
                 <p className="text-muted-foreground leading-relaxed font-normal">
-                  Tkanina materacowa najwyższej jakości, z atestem higienicznym. To jedyna warstwa,
-                  której dotykasz przez całą noc — dlatego nie oszczędzamy na niej.
+                  Pokrowiec to nie tylko wygląd materaca. To materiał, który przez całą noc ma prawie bezpośredni kontakt z Twoim ciałem.
+                  <br />
+                  Dlatego wybieramy wysokiej jakości tkaniny materacowe z atestem higienicznym. Są przyjemne w dotyku, trwałe i odpowiednie do codziennego użytkowania.
+                  <br /><br />
+                  Na pokrowcu nie oszczędzamy. Bo trudno mówić o dobrym materacu, jeśli to właśnie jego powierzchnia jest najsłabszym elementem.
                 </p>
               </div>
             </div>
@@ -64,7 +66,6 @@ export default function TechSpine() {
 
         </div>
       </section>
-
       {/* Narrow trust strip */}
       <div className="border-y border-white/5 bg-card/60">
         <div className="container mx-auto px-6 md:px-12 py-4 md:py-5">
@@ -81,7 +82,6 @@ export default function TechSpine() {
           </div>
         </div>
       </div>
-
       <section className="py-24 md:py-32 bg-background relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none -translate-y-1/2 translate-x-1/3" />
         <div className="container mx-auto px-6 md:px-12 relative z-10">
