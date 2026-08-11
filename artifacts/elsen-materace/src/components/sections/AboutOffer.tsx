@@ -120,26 +120,29 @@ export default function AboutOffer() {
             ))}
           </div>
 
-          {/* Bullet list */}
+          {/* Dlaczego ELSEN */}
           <div
-            className="max-w-4xl mx-auto p-8 md:p-12 rounded-sm shadow-sm"
+            className="max-w-4xl mx-auto p-8 md:p-14 rounded-sm shadow-md"
             style={{ backgroundColor: light.card, border: `1px solid ${light.border}` }}
           >
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 text-sm md:text-base font-normal"
-                style={{ color: light.body }}>
+            <h3 className="text-2xl md:text-3xl font-extrabold mb-10 text-center" style={{ color: light.heading }}>
+              Dlaczego ELSEN?
+            </h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-7" style={{ color: light.body }}>
               {[
-                'Materace premium — wykonywane pojedynczo, nie z magazynu',
-                'Wszystkie rozmiary — również na indywidualne zamówienie',
-                'Materace sprężynowe i hybrydowe — sprężyny kieszeniowe w połączeniu z warstwami pianki',
-                'Dobór twardości — pod Twoją wagę i sposób spania',
-                'Wybór materiałów i konfiguracji warstw — decydujesz, co jest w środku',
-                'Produkcja w Polsce — w naszej pracowni w Wielkopolsce',
-                'Krótkie terminy realizacji — do 14 dni',
-                'Konkurencyjne ceny — kupujesz w pracowni, bez marży salonu',
-              ].map((item) => (
-                <li key={item} className="flex gap-4">
-                  <span className="mt-1 shrink-0 font-bold" style={{ color: light.bullet }}>•</span>
-                  {item}
+                ['Ręczna produkcja', 'każdy materac powstaje w naszej pracowni w Wielkopolsce.'],
+                ['Sprawdzone materiały', 'wybieramy je przede wszystkim pod kątem trwałości i komfortu, nie tylko ceny.'],
+                ['Sprężyny kieszeniowe i pianki', 'możemy łączyć różne warstwy, tworząc konstrukcję dopasowaną do Twoich potrzeb.'],
+                ['Dowolne wymiary', 'również wtedy, gdy standardowy rozmiar po prostu nie pasuje.'],
+                ['Do 14 dni realizacji', 'nie każemy Ci czekać miesiącami na materac.'],
+                ['Bez salonowej marży', 'zamawiasz bezpośrednio w naszej pracowni.'],
+              ].map(([bold, rest]) => (
+                <li key={bold} className="flex gap-4 text-base md:text-lg leading-relaxed">
+                  <span className="mt-1 shrink-0 text-lg" style={{ color: light.bullet }}>★</span>
+                  <span>
+                    <span className="font-bold" style={{ color: light.heading }}>{bold}</span>
+                    {' '}— {rest}
+                  </span>
                 </li>
               ))}
             </ul>
