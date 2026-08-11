@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import heroImage from '@assets/ELSEN_main_1786409153785.png';
-import logoPath from '@assets/logo_1785777081436.png';
+import logoPath from '@assets/ELSEN_logo_z_hasłem_1786460307242.png';
 
 export default function Hero() {
   return (
