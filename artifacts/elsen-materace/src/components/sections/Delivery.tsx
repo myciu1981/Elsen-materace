@@ -4,9 +4,9 @@ import { Truck, MapPin, Package } from 'lucide-react';
 
 export default function Delivery() {
   return (
-    <section className="py-24 md:py-32 bg-background relative overflow-hidden">
+    <section className="py-12 md:py-16 bg-background relative overflow-hidden">
       <div className="container mx-auto px-6 md:px-12 relative z-10">
-        <div className="max-w-3xl mx-auto text-center mb-20">
+        <div className="max-w-3xl mx-auto text-center mb-10">
           <h2 className="text-4xl md:text-5xl font-serif text-foreground mb-6">Gdzie dowozimy</h2>
           <div className="w-24 h-1 bg-primary mx-auto"></div>
         </div>
