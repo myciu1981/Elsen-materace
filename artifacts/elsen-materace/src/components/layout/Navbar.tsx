@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'wouter';
 import { Layers, Package, ListChecks, Truck, FileText, MessageCircle } from 'lucide-react';
-import logoPath from '@assets/logo_1785777081436.png';
+import logoPath from '@assets/elsen_logo_main_1786416405159.png';
 
 const navLinks = [
   { label: 'OFERTA', href: '#oferta' },
