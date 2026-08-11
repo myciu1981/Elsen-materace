@@ -44,19 +44,14 @@ export default function AboutOffer() {
               Witaj w ELSEN Materace
             </h2>
             <div className="space-y-6 text-lg font-normal leading-relaxed" style={{ color: light.body }}>
+              <p>Dobry materac nie musi mieć wielkich słów na opakowaniu. Powinien po prostu dobrze robić swoją robotę  - być wygodny, dobrze podpierać ciało i służyć przez lata.
+
+</p>
               <p>
-                W ELSEN wierzymy, że dobry sen to podstawa dobrego życia. Dlatego każdy materac
-                tworzymy z dbałością o najmniejszy detal — tak, aby zapewnić trwałość, wygodę
-                i odpowiednie podparcie kręgosłupa.
-              </p>
-              <p>
-                Jesteśmy małą manufakturą spod Nowego Tomyśla. Każdy materac szyje ręcznie mistrz
-                tapicerstwa z ponad dwudziestoletnim doświadczeniem, zdobytym w wielkopolskim
-                zagłębiu meblarskim przy produkcji mebli najwyższej klasy.
+                ELSEN to mała manufaktura spod Nowego Tomyśla. Materace powstają u nas ręcznie, jeden po drugim. Za ich wykonanie odpowiada mistrz tapicerstwa z ponad 20-letnim doświadczeniem, zdobywanym w wielkopolskim zagłębiu meblarskim, przy produkcji mebli najwyższej klasy.
               </p>
               <p className="font-semibold" style={{ color: 'hsl(43 55% 38%)' }}>
-                Nie produkujemy masowo. Robimy jeden materac naraz — dla konkretnej osoby,
-                o konkretnej wadze, śpiącej w konkretny sposób.
+                Nie produkujemy masowo. Robimy jeden materac naraz - dla konkretnej osoby, o konkretnej wadze i sposobie spania. Dlatego możemy skupić się na tym, co naprawdę ma znaczenie: na jego wnętrzu, proporcjach poszczególnych warstw i jakości wykonania.
               </p>
             </div>
           </motion.div>
