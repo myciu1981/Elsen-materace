@@ -18,7 +18,8 @@ export default function TechSpine() {
             className="mb-16 text-center max-w-3xl mx-auto"
           >
             <h2 className="text-4xl md:text-5xl text-foreground mb-6">Twój komfort, nasza jakość</h2>
-            <p className="text-muted-foreground text-lg font-normal leading-relaxed">Dobry materac zaczyna się od tego, czego nie widać. Od sprężyn, pianek, materiałów i sposobu, w jaki wszystkie te warstwy ze sobą współpracują. Dlatego nie wybieramy ich przypadkowo.</p>
+            <p className="text-muted-foreground text-lg font-normal leading-relaxed">Dobry materac zaczyna się od tego, czego nie widać. Od sprężyn, pianek, materiałów i sposobu, w jaki wszystkie te warstwy ze sobą współpracują. 
+            Dlatego nie wybieramy ich przypadkowo.</p>
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch mb-16">
