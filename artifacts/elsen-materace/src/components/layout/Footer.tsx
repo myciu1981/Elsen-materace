@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'wouter';
+import logoPath from '@assets/logo_1786463464709.png';
 
 function FacebookIcon() {
   return (
@@ -21,7 +22,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
           <div>
-            <h3 className="font-serif text-2xl text-primary mb-4">ELSEN MATERACE</h3>
+            <img src={logoPath} alt="ELSEN Materace" className="h-24 object-contain mb-4" />
             <p className="text-muted-foreground mb-2">Komfort, na który zasługujesz</p>
             <p className="text-sm text-muted-foreground/70">Polska produkcja · 24 miesiące gwarancji</p>
           </div>
