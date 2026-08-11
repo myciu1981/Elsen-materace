@@ -48,7 +48,7 @@ export default function Hero() {
             z twardością dobraną do Ciebie
           </h1>
 
-          <p className="text-sm md:text-base text-white/70 mb-5 leading-relaxed max-w-2xl font-normal">Mała manufaktura pod Nowym Tomyślem. Produkujemy materace z komponentów wysokiej jakości. Sprężyny kieszeniowe ze stali odpornej na odkształcenia, pianki wysokiej gęstości,, pokrowce z certyfikowanych tkanin. Twardość ustalana indywidualnie. </p>
+          <p className="text-sm md:text-base text-white/70 mb-5 leading-relaxed max-w-2xl font-normal">Mała manufaktura pod Nowym Tomyślem. Produkujemy materace z komponentów wysokiej jakości. Sprężyny kieszeniowe ze stali odpornej na odkształcenia, pianki o dużej gęstości, pokrowce z certyfikowanych tkanin. Twardość ustalana indywidualnie. </p>
 
           <div className="flex flex-col sm:flex-row gap-3 mb-5">
             <a
