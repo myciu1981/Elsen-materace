@@ -21,7 +21,7 @@ export default function TechSpine() {
             <p className="text-muted-foreground text-lg font-normal leading-relaxed">Dobry materac zaczyna się od tego, czego nie widać. Od sprężyn, pianek, materiałów i sposobu, w jaki wszystkie te warstwy ze sobą współpracują. Dlatego nie wybieramy ich przypadkowo.</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch mb-16">
             <div className="space-y-4">
               <div className="bg-background border border-white/5 p-5 md:p-6 rounded-sm">
                 <h3 className="text-lg text-primary mb-3">Sprężyny kieszeniowe</h3>
@@ -53,11 +53,11 @@ export default function TechSpine() {
               </div>
             </div>
 
-            <div className="flex items-start justify-center">
+            <div className="h-full overflow-hidden flex items-start">
               <LightboxImage
                 src={techImage}
                 alt="Przekrój warstw materaca ELSEN"
-                className="w-full h-auto rounded-sm block shadow-2xl"
+                className="w-full h-full object-contain object-top rounded-sm block shadow-2xl"
               />
             </div>
           </div>
