@@ -25,7 +25,7 @@ export default function TechSpine() {
             <div className="space-y-4">
               <div className="bg-background border border-white/5 p-5 md:p-6 rounded-sm">
                 <h3 className="text-lg text-primary mb-3">Sprężyny kieszeniowe</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed font-normal">
+                <p className="text-muted-foreground font-normal text-[16px]">
                   Każda sprężyna pracuje niezależnie od pozostałych. Dzięki temu materac reaguje na nacisk dokładnie tam, gdzie jest potrzebny, zamiast uginać się na całej powierzchni.
                   <br /><br />
                   To szczególnie ważne, gdy śpią dwie osoby — ruch jednej nie powinien budzić drugiej. Sprężyny wykonujemy z wysokiej jakości stali, która zachowuje swoje właściwości przez lata.
@@ -33,7 +33,7 @@ export default function TechSpine() {
               </div>
               <div className="bg-background border border-white/5 p-5 md:p-6 rounded-sm">
                 <h3 className="text-lg text-primary mb-3">Pianki wysokiej gęstości</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed font-normal">
+                <p className="text-muted-foreground font-normal text-[16px]">
                   Nie każda pianka nadaje się do materaca. Liczy się jej gęstość, sprężystość i odpowiednie dobranie do całej konstrukcji.
                   <br />
                   Dlatego korzystamy z pianek o wysokiej gęstości i różnych parametrach. Dobieramy je do konkretnej konstrukcji i wagi użytkownika.
@@ -43,7 +43,7 @@ export default function TechSpine() {
               </div>
               <div className="bg-background border border-white/5 p-5 md:p-6 rounded-sm">
                 <h3 className="text-lg text-primary mb-3">Pokrowiec z atestem</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed font-normal">
+                <p className="text-muted-foreground font-normal text-[16px]">
                   Pokrowiec to nie tylko wygląd materaca. To materiał, który przez całą noc ma prawie bezpośredni kontakt z Twoim ciałem.
                   <br />
                   Dlatego wybieramy wysokiej jakości tkaniny materacowe z atestem higienicznym. Są przyjemne w dotyku, trwałe i odpowiednie do codziennego użytkowania.
