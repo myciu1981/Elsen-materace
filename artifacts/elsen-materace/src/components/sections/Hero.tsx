@@ -17,7 +17,6 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/15" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30" />
       </div>
-
       <div className="container relative z-10 mx-auto px-6 md:px-12 py-6 md:py-8">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -49,11 +48,7 @@ export default function Hero() {
             z twardością dobraną do Ciebie
           </h1>
 
-          <p className="text-sm md:text-base text-white/70 mb-5 leading-relaxed max-w-2xl font-normal">
-            Mała manufaktura pod Nowym Tomyślem. Sprężyny kieszeniowe ze stali odpornej na
-            odkształcenia, pianki wysokiej gęstości, twardość ustalana z Twojej wagi i sposobu
-            spania — nie z etykiety H2 czy H3.
-          </p>
+          <p className="text-sm md:text-base text-white/70 mb-5 leading-relaxed max-w-2xl font-normal">Mała manufaktura pod Nowym Tomyślem. Produkujemy materace z komponentów wysokiej jakości. Sprężyny kieszeniowe ze stali odpornej na odkształcenia, pianki wysokiej gęstości,, pokrowce z certyfikowanych tkanin. Twardość ustalana indywidualnie. </p>
 
           <div className="flex flex-col sm:flex-row gap-3 mb-5">
             <a
