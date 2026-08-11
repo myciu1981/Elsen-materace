@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import techImage from '@assets/ChatGPT_Image_3_sie_2026,_08_07_00_1785777081434.png';
+import techImage from '@assets/ChatGPT_Image_10_sie_2026,_21_42_40_1786419810337.png';
 import spineImage from '@assets/ChatGPT_Image_3_sie_2026,_08_00_12_1785777081433.png';
 import { Activity, ShieldCheck, Heart } from 'lucide-react';
 import { LightboxImage } from '@/components/ui/LightboxImage';
@@ -21,19 +21,19 @@ export default function TechSpine() {
             <p className="text-muted-foreground text-lg font-normal leading-relaxed">Dobry materac zaczyna się od tego, czego nie widać. Od sprężyn, pianek, materiałów i sposobu, w jaki wszystkie te warstwy ze sobą współpracują. Dlatego nie wybieramy ich przypadkowo.</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
-            <div className="space-y-8">
-              <div className="bg-background border border-white/5 p-8 md:p-10 rounded-sm">
-                <h3 className="text-2xl text-primary mb-4">Sprężyny kieszeniowe</h3>
-                <p className="text-muted-foreground leading-relaxed font-normal">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
+            <div className="space-y-4">
+              <div className="bg-background border border-white/5 p-5 md:p-6 rounded-sm">
+                <h3 className="text-lg text-primary mb-3">Sprężyny kieszeniowe</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed font-normal">
                   Każda sprężyna pracuje niezależnie od pozostałych. Dzięki temu materac reaguje na nacisk dokładnie tam, gdzie jest potrzebny, zamiast uginać się na całej powierzchni.
                   <br /><br />
                   To szczególnie ważne, gdy śpią dwie osoby — ruch jednej nie powinien budzić drugiej. Sprężyny wykonujemy z wysokiej jakości stali, która zachowuje swoje właściwości przez lata.
                 </p>
               </div>
-              <div className="bg-background border border-white/5 p-8 md:p-10 rounded-sm">
-                <h3 className="text-2xl text-primary mb-4">Pianki wysokiej gęstości</h3>
-                <p className="text-muted-foreground leading-relaxed font-normal">
+              <div className="bg-background border border-white/5 p-5 md:p-6 rounded-sm">
+                <h3 className="text-lg text-primary mb-3">Pianki wysokiej gęstości</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed font-normal">
                   Nie każda pianka nadaje się do materaca. Liczy się jej gęstość, sprężystość i odpowiednie dobranie do całej konstrukcji.
                   <br />
                   Dlatego korzystamy z pianek o wysokiej gęstości i różnych parametrach. Dobieramy je do konkretnej konstrukcji i wagi użytkownika.
@@ -41,9 +41,9 @@ export default function TechSpine() {
                   Bo to właśnie wnętrze materaca decyduje, czy po kilku latach nadal śpisz na materacu, czy zaczynasz szukać w nim swojej własnej doliny.
                 </p>
               </div>
-              <div className="bg-background border border-white/5 p-8 md:p-10 rounded-sm">
-                <h3 className="text-2xl text-primary mb-4">Pokrowiec z atestem</h3>
-                <p className="text-muted-foreground leading-relaxed font-normal">
+              <div className="bg-background border border-white/5 p-5 md:p-6 rounded-sm">
+                <h3 className="text-lg text-primary mb-3">Pokrowiec z atestem</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed font-normal">
                   Pokrowiec to nie tylko wygląd materaca. To materiał, który przez całą noc ma prawie bezpośredni kontakt z Twoim ciałem.
                   <br />
                   Dlatego wybieramy wysokiej jakości tkaniny materacowe z atestem higienicznym. Są przyjemne w dotyku, trwałe i odpowiednie do codziennego użytkowania.
@@ -53,14 +53,12 @@ export default function TechSpine() {
               </div>
             </div>
 
-            <div className="flex items-center justify-center">
-              <div className="bg-background border border-white/8 rounded-sm p-6 md:p-8 shadow-2xl w-full">
-                <LightboxImage
-                  src={techImage}
-                  alt="Przekrój warstw materaca ELSEN"
-                  className="w-full h-auto rounded-sm block"
-                />
-              </div>
+            <div className="flex items-start justify-center">
+              <LightboxImage
+                src={techImage}
+                alt="Przekrój warstw materaca ELSEN"
+                className="w-full h-auto rounded-sm block shadow-2xl"
+              />
             </div>
           </div>
 
