@@ -20,7 +20,7 @@ const light = {
 const features = [
   { icon: User,             title: 'Materac dopasowany do Ciebie', desc: 'Nie każdy śpi tak samo. Dlatego nie zaczynamy od pytania „jaki model wybrać?", tylko od tego, czego potrzebujesz.' },
   { icon: Ruler,            title: 'Dowolny wymiar',               desc: 'Robimy również materace na nietypowe łóżka i indywidualne zamówienia. Masz nietypowe łóżko? Potrzebujesz specjalny materac dla dzieci? Pomożemy!' },
-  { icon: SlidersHorizontal, title: 'Twardość dobrana do Ciebie', desc: 'Waga, pozycja snu i indywidualne odczucia mają znaczenie. Dobieramy konstrukcję tak, żeby materac był wygodny i dawał odpowiednie podparcie.' },
+  { icon: SlidersHorizontal, title: 'Indywidualnie dobrana twardość', desc: 'Waga, pozycja snu i indywidualne odczucia mają znaczenie. Dobieramy konstrukcję tak, żeby materac był wygodny i dawał odpowiednie podparcie.' },
   { icon: Layers,           title: 'Ty wybierasz, co jest w środku', desc: 'Pianki, mata kokosowa, sprężyny kieszeniowe, filc — pokazujemy Ci możliwości i wspólnie dobieramy warstwy.' },
 ];
 
