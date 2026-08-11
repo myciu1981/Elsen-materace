@@ -25,7 +25,7 @@ export function LightboxImage({ src, alt, className = '' }: LightboxImageProps) 
 
   return (
     <>
-      <div className="relative group cursor-zoom-in" onClick={() => setOpen(true)}>
+      <div className="relative group cursor-zoom-in h-full" onClick={() => setOpen(true)}>
         <img src={src} alt={alt} className={className} />
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-sm flex items-center justify-center">
           <ZoomIn
