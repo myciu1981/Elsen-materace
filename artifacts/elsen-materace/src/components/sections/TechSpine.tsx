@@ -108,22 +108,6 @@ export default function TechSpine() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm font-medium tracking-wide">
-                {[
-                  'Zdrowe podparcie kręgosłupa',
-                  'Redukcja napięcia mięśni',
-                  'Lepsza jakość snu',
-                  'Gwarancja komfortu',
-                ].map((item) => (
-                  <div
-                    key={item}
-                    className="flex items-center gap-4 bg-card border border-white/5 p-4 rounded-sm"
-                  >
-                    <div className="w-2 h-2 rounded-full bg-primary shrink-0" />
-                    {item}
-                  </div>
-                ))}
-              </div>
             </motion.div>
 
             <motion.div
@@ -140,6 +124,24 @@ export default function TechSpine() {
                 />
               </div>
             </motion.div>
+          </div>
+
+          {/* Kafelki — jeden wiersz pod całą sekcją */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-10 text-sm font-medium tracking-wide">
+            {[
+              'Zdrowe podparcie kręgosłupa',
+              'Redukcja napięcia mięśni',
+              'Lepsza jakość snu',
+              'Gwarancja komfortu',
+            ].map((item) => (
+              <div
+                key={item}
+                className="flex items-center gap-3 bg-card border border-white/5 p-4 rounded-sm"
+              >
+                <div className="w-2 h-2 rounded-full bg-primary shrink-0" />
+                {item}
+              </div>
+            ))}
           </div>
         </div>
       </section>
