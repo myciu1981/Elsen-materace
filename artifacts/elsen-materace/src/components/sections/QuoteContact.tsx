@@ -93,7 +93,7 @@ export default function QuoteContact() {
 
   return (
     <>
-      <section id="wycena" className="py-24 md:py-32 bg-card border-y border-white/5 scroll-mt-20">
+      <section id="wycena" className="py-24 md:py-32 scroll-mt-20" style={{ backgroundColor: 'hsl(var(--navy))' }}>
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-16">
@@ -110,7 +110,7 @@ export default function QuoteContact() {
               </div>
             )}
 
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-8 bg-background border border-white/5 p-8 md:p-12 rounded-sm shadow-2xl relative overflow-hidden">
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-8 bg-white/5 border border-white/10 p-8 md:p-12 rounded-sm shadow-2xl relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-[50px] pointer-events-none" />
               
               <input type="text" {...register("website")} style={{ opacity: 0, position: 'absolute', left: '-9999px' }} tabIndex={-1} aria-hidden="true" />
@@ -191,7 +191,7 @@ export default function QuoteContact() {
         </div>
       </section>
 
-      <section className="py-24 md:py-32 bg-background text-center relative overflow-hidden">
+      <section className="py-24 md:py-32 text-center relative overflow-hidden" style={{ backgroundColor: 'hsl(var(--navy))' }}>
         <div className="container mx-auto px-6 md:px-12 relative z-10">
           <h2 className="text-4xl md:text-5xl font-serif text-foreground mb-6">Zapraszamy do kontaktu</h2>
           <p className="text-lg text-muted-foreground font-normal mb-16 max-w-xl mx-auto">
