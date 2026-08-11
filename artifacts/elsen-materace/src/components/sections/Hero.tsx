@@ -57,7 +57,7 @@ export default function Hero() {
                 e.preventDefault();
                 document.querySelector('#wycena')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="inline-flex items-center justify-center h-11 px-7 rounded-sm bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors tracking-wide text-sm"
+              className="flex-1 inline-flex items-center justify-center h-11 px-7 rounded-sm bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors tracking-wide text-sm"
               data-testid="hero-cta-quote"
             >
               Zapytaj o wycenę
@@ -66,7 +66,7 @@ export default function Hero() {
               href="https://wa.me/48504810841"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center h-11 px-7 rounded-sm border border-primary text-primary font-semibold hover:bg-primary/10 transition-colors tracking-wide text-sm bg-black/20 backdrop-blur-sm"
+              className="flex-1 inline-flex items-center justify-center h-11 px-7 rounded-sm border border-primary text-primary font-semibold hover:bg-primary/10 transition-colors tracking-wide text-sm bg-black/20 backdrop-blur-sm"
               data-testid="hero-cta-whatsapp"
             >
               Napisz na WhatsApp
