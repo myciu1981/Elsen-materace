@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'wouter';
-import { Layers, Package, ListChecks, Truck, FileText, MessageCircle } from 'lucide-react';
+import { Layers, Package, ListChecks, Truck, FileText, MessageCircle, Phone } from 'lucide-react';
 import logoPath from '@assets/elsen_logo_main_1786416405159.png';
 
 const navLinks = [
@@ -8,6 +8,8 @@ const navLinks = [
   { label: 'CO JEST W ŚRODKU', href: '#co-jest-w-srodku' },
   { label: 'JAK TO DZIAŁA', href: '#jak-to-dziala' },
   { label: 'DOSTAWA', href: '#dostawa' },
+  { label: 'WYCENA', href: '#wycena' },
+  { label: 'KONTAKT', href: '#kontakt' },
 ];
 
 const mobileNavRow1 = [
@@ -19,6 +21,7 @@ const mobileNavRow1 = [
 const mobileNavRow2 = [
   { label: 'Dostawa', href: '#dostawa', Icon: Truck },
   { label: 'Wycena', href: '#wycena', Icon: FileText },
+  { label: 'Kontakt', href: '#kontakt', Icon: Phone },
   { label: 'WhatsApp', href: 'https://wa.me/48504810841', Icon: MessageCircle, external: true },
 ];
 
@@ -124,7 +127,7 @@ export default function Navbar() {
           ))}
         </div>
         {/* Row 2 */}
-        <div className="grid grid-cols-3">
+        <div className="grid grid-cols-4">
           {mobileNavRow2.map(({ label, href, Icon, external }) => (
             <button
               key={href}
