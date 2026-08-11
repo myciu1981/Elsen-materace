@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import techImage from "@assets/ChatGPT_Image_9_sie_2026,_15_21_03_1786410073445.png";
-import spineImage from "@assets/ChatGPT_Image_9_sie_2026,_15_26_21_1786410073446.png";
+import techImage from '@assets/ChatGPT_Image_3_sie_2026,_08_07_00_1785777081434.png';
+import spineImage from '@assets/ChatGPT_Image_3_sie_2026,_08_00_12_1785777081433.png';
 import { Activity, ShieldCheck, Heart } from 'lucide-react';
 import { LightboxImage } from '@/components/ui/LightboxImage';
 
@@ -51,13 +51,14 @@ export default function TechSpine() {
               </div>
             </div>
 
-            <div className="relative h-full flex flex-col justify-center">
-              <div className="absolute inset-0 bg-primary/5 translate-x-4 -translate-y-4 rounded-sm" />
-              <LightboxImage
-                src={techImage}
-                alt="Przekrój warstw materaca ELSEN"
-                className="relative z-10 w-full h-auto rounded-sm shadow-2xl grayscale-[20%]"
-              />
+            <div className="flex items-center justify-center">
+              <div className="bg-background border border-white/8 rounded-sm p-6 md:p-8 shadow-2xl w-full">
+                <LightboxImage
+                  src={techImage}
+                  alt="Przekrój warstw materaca ELSEN"
+                  className="w-full h-auto rounded-sm block"
+                />
+              </div>
             </div>
           </div>
 
@@ -129,11 +130,13 @@ export default function TechSpine() {
               viewport={{ once: true, margin: '-100px' }}
               transition={{ duration: 0.8 }}
             >
-              <LightboxImage
-                src={spineImage}
-                alt="Prawidłowe i nieprawidłowe ułożenie kręgosłupa"
-                className="w-full h-auto rounded-sm shadow-2xl"
-              />
+              <div className="bg-background border border-white/8 rounded-sm p-6 md:p-8 shadow-2xl">
+                <LightboxImage
+                  src={spineImage}
+                  alt="Prawidłowe i nieprawidłowe ułożenie kręgosłupa"
+                  className="w-full h-auto rounded-sm block"
+                />
+              </div>
             </motion.div>
           </div>
         </div>
