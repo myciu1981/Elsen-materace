@@ -62,19 +62,25 @@ export default function TechSpine() {
             </div>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-6 md:gap-12 text-sm text-muted-foreground uppercase tracking-widest font-medium border-t border-white/5 pt-16">
-            <span className="flex items-center gap-3">
-              <ShieldCheck size={20} className="text-primary" /> Wysokiej jakości materiały
+        </div>
+      </section>
+
+      {/* Narrow trust strip */}
+      <div className="border-y border-white/5 bg-card/60">
+        <div className="container mx-auto px-6 md:px-12 py-4 md:py-5">
+          <div className="flex flex-wrap justify-center gap-6 md:gap-12 text-xs md:text-sm text-muted-foreground uppercase tracking-widest font-medium">
+            <span className="flex items-center gap-2">
+              <ShieldCheck size={16} className="text-primary shrink-0" /> Wysokiej jakości materiały
             </span>
-            <span className="flex items-center gap-3">
-              <Heart size={20} className="text-primary" /> Zdrowy i komfortowy sen
+            <span className="flex items-center gap-2">
+              <Heart size={16} className="text-primary shrink-0" /> Zdrowy i komfortowy sen
             </span>
-            <span className="flex items-center gap-3">
-              <Activity size={20} className="text-primary" /> Trwałość na długie lata
+            <span className="flex items-center gap-2">
+              <Activity size={16} className="text-primary shrink-0" /> Trwałość na długie lata
             </span>
           </div>
         </div>
-      </section>
+      </div>
 
       <section className="py-24 md:py-32 bg-background relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none -translate-y-1/2 translate-x-1/3" />
