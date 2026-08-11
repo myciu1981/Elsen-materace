@@ -191,7 +191,7 @@ export default function QuoteContact() {
         </div>
       </section>
 
-      <section className="pt-12 pb-24 md:pt-16 md:pb-32 text-center relative overflow-hidden" style={{ backgroundColor: 'hsl(var(--navy))' }}>
+      <section className="pt-6 pb-12 md:pt-8 md:pb-16 text-center relative overflow-hidden" style={{ backgroundColor: 'hsl(var(--navy))' }}>
         <div className="container mx-auto px-6 md:px-12 relative z-10">
           <h2 className="text-4xl md:text-5xl font-serif text-foreground mb-6">Zapraszamy do kontaktu</h2>
           <p className="text-lg text-muted-foreground font-normal mb-16 max-w-xl mx-auto">
