@@ -62,7 +62,6 @@ export default function Testimonials() {
   return (
     <section className="py-32 bg-background border-y border-white/5 relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl aspect-square bg-primary/5 rounded-full blur-[150px] pointer-events-none" />
-
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -74,10 +73,7 @@ export default function Testimonials() {
           <h2 className="text-4xl md:text-5xl font-serif text-foreground mb-6">
             Dlaczego klienci nas polecają
           </h2>
-          <p className="text-lg text-muted-foreground mb-16 font-normal max-w-2xl mx-auto">
-            Prawie wszyscy nasi klienci trafili do nas z polecenia. Nie mamy budżetu
-            reklamowego — mamy ludzi, którzy dobrze śpią i mówią o tym dalej.
-          </p>
+          <p className="text-lg text-muted-foreground mb-16 font-normal max-w-2xl mx-auto">Prawie wszyscy nasi klienci trafili do nas z polecenia. Nie mamy ogromnego budżetu reklamowego —  mamy pasję i klientów, którzy dobrze śpią i mówią o tym dalej!</p>
 
           <div className="relative bg-card border border-card-border rounded-sm shadow-xl overflow-hidden">
             <span className="absolute -top-6 -left-2 md:-left-4 text-9xl text-primary/10 font-serif leading-none select-none pointer-events-none z-0">
