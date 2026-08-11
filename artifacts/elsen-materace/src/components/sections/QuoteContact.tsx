@@ -90,13 +90,14 @@ export default function QuoteContact() {
   };
 
   return (
-    <section
-      id="wycena"
-      className="py-14 md:py-20 scroll-mt-20"
-      style={{ backgroundColor: 'hsl(var(--navy))' }}
-    >
-      {/* Invisible anchor for #kontakt nav link */}
-      <span id="kontakt" className="sr-only" aria-hidden="true" />
+    <>
+      {/* Anchor for #kontakt — sits just before the section so scroll-mt offsets navbar */}
+      <div id="kontakt" className="scroll-mt-20" />
+      <section
+        id="wycena"
+        className="py-14 md:py-20"
+        style={{ backgroundColor: 'hsl(var(--navy))' }}
+      >
 
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-[5fr_7fr] gap-10 lg:gap-16 items-start">
@@ -253,5 +254,6 @@ export default function QuoteContact() {
         </div>
       </div>
     </section>
+    </>
   );
 }
