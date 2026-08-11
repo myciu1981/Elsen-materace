@@ -1,6 +1,5 @@
 import React from 'react';
 import Hero from '@/components/sections/Hero';
-import TrustBar from '@/components/sections/TrustBar';
 import AboutOffer from '@/components/sections/AboutOffer';
 import TechSpine from '@/components/sections/TechSpine';
 import ProcessTestimonials from '@/components/sections/ProcessTestimonials';
@@ -13,7 +12,6 @@ export default function Home() {
     <>
       {/* Hero — no scroll-target needed, it's the top */}
       <Hero />
-      <TrustBar />
 
       {/* Oferta + O nas */}
       <div id="oferta">
