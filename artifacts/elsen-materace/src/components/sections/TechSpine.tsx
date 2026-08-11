@@ -127,7 +127,7 @@ export default function TechSpine() {
           </div>
 
           {/* Kafelki — jeden wiersz pod całą sekcją */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-10 text-sm font-medium tracking-wide">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-5 text-sm font-medium tracking-wide">
             {[
               'Zdrowe podparcie kręgosłupa',
               'Redukcja napięcia mięśni',
