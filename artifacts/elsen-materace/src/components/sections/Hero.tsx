@@ -34,7 +34,7 @@ export default function Hero() {
             <img
               src={logoPath}
               alt="ELSEN Materace"
-              className="h-14 md:h-20 object-contain drop-shadow-[0_0_30px_rgba(201,168,76,0.25)]"
+              className="h-[84px] md:h-[120px] object-contain drop-shadow-[0_0_30px_rgba(201,168,76,0.25)]"
             />
           </motion.div>
 
