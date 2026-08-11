@@ -50,14 +50,14 @@ export default function Hero() {
 
           <p className="text-sm md:text-base text-white/70 mb-5 leading-relaxed max-w-2xl font-normal">Mała manufaktura pod Nowym Tomyślem. Produkujemy materace z komponentów wysokiej jakości. Sprężyny kieszeniowe ze stali odpornej na odkształcenia, pianki o dużej gęstości, pokrowce z certyfikowanych tkanin. Twardość ustalana indywidualnie. </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 mb-5">
+          <div className="inline-grid grid-cols-2 gap-3 mb-5">
             <a
               href="#wycena"
               onClick={(e) => {
                 e.preventDefault();
                 document.querySelector('#wycena')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="flex-1 inline-flex items-center justify-center h-11 px-7 rounded-sm bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors tracking-wide text-sm"
+              className="inline-flex items-center justify-center h-11 px-4 rounded-sm bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors tracking-wide text-sm"
               data-testid="hero-cta-quote"
             >
               Zapytaj o wycenę
@@ -66,7 +66,7 @@ export default function Hero() {
               href="https://wa.me/48504810841"
               target="_blank"
               rel="noreferrer"
-              className="flex-1 inline-flex items-center justify-center h-11 px-7 rounded-sm border border-primary text-primary font-semibold hover:bg-primary/10 transition-colors tracking-wide text-sm bg-black/20 backdrop-blur-sm"
+              className="inline-flex items-center justify-center h-11 px-4 rounded-sm border border-primary text-primary font-semibold hover:bg-primary/10 transition-colors tracking-wide text-sm bg-black/20 backdrop-blur-sm"
               data-testid="hero-cta-whatsapp"
             >
               Napisz na WhatsApp
