@@ -18,10 +18,10 @@ const light = {
 };
 
 const features = [
-  { icon: Ruler,            title: 'Dowolne wymiary',    desc: 'Wszystkie rozmiary, również nietypowe' },
-  { icon: SlidersHorizontal, title: 'Dobór twardości',   desc: 'Pod Twoją wagę i sposób spania' },
-  { icon: Layers,           title: 'Wybór materiałów',   desc: 'Ty decydujesz o konfiguracji warstw' },
-  { icon: User,             title: 'Dopasowanie',        desc: 'Do Twoich potrzeb, nie do średniej statystycznej' },
+  { icon: User,             title: 'Materac dopasowany do Ciebie', desc: 'Nie każdy śpi tak samo. Dlatego nie zaczynamy od pytania „jaki model wybrać?", tylko od tego, czego potrzebujesz.' },
+  { icon: Ruler,            title: 'Dowolny wymiar',               desc: 'Robimy również materace na nietypowe łóżka i indywidualne zamówienia.' },
+  { icon: SlidersHorizontal, title: 'Twardość dobrana do Ciebie', desc: 'Waga, pozycja snu i indywidualne odczucia mają znaczenie. Dobieramy konstrukcję tak, żeby materac był wygodny i dawał odpowiednie podparcie.' },
+  { icon: Layers,           title: 'Ty wybierasz, co jest w środku', desc: 'Pianki, mata kokosowa, sprężyny kieszeniowe, filc — pokazujemy Ci możliwości i wspólnie dobieramy warstwy.' },
 ];
 
 export default function AboutOffer() {
