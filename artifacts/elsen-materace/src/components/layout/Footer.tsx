@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'wouter';
-import logoPath from '@assets/logo_1786463464709.png';
+import logoPath from '@assets/ELSEN_logo_z_hasłem_1786463523409.png';
 
 function FacebookIcon() {
   return (
