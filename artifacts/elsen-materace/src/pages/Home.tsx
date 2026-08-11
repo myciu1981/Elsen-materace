@@ -23,17 +23,17 @@ export default function Home() {
         <TechSpine />
       </div>
 
+      {/* Dostawa */}
+      <div id="dostawa">
+        <Delivery />
+      </div>
+
       {/* Jak to działa + Opinie */}
       <div id="jak-to-dziala">
         <ProcessTestimonials />
       </div>
 
       <Gallery />
-
-      {/* Dostawa */}
-      <div id="dostawa">
-        <Delivery />
-      </div>
 
       {/* Wycena */}
       <div id="wycena">
