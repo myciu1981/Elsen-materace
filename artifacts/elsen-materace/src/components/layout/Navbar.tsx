@@ -49,6 +49,25 @@ export default function Navbar() {
 
   return (
     <>
+      {/* ── Mobile top bar ── */}
+      <header className="md:hidden fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/95 backdrop-blur-md border-b border-white/5 px-4 py-3 flex items-center justify-between">
+        <Link
+          href="/"
+          onClick={(e: React.MouseEvent) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
+        >
+          <img src={logoPath} alt="ELSEN Materace" className="h-8 object-contain" />
+        </Link>
+        <a
+          href="tel:504810841"
+          className="border border-primary/60 text-primary px-4 py-1.5 rounded-sm text-[12px] font-semibold tracking-wider"
+        >
+          504 810 841
+        </a>
+      </header>
+
       {/* ── Desktop / tablet header ── */}
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 hidden md:flex ${
