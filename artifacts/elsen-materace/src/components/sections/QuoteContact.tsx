@@ -109,7 +109,7 @@ export default function QuoteContact() {
               <h2 className="text-3xl md:text-4xl font-bold text-foreground leading-tight mb-4">
                 Zapytaj<br />o wycenę
               </h2>
-              <p className="text-sm text-muted-foreground leading-relaxed max-w-sm">
+              <p className="text-muted-foreground max-w-sm text-[16px]">
                 Zadzwoń lub napisz — a my doradzimy. Wycena jest bezpłatna i do niczego nie zobowiązuje.
                 Odpowiadamy zwykle w ciągu kilku godzin, najpóźniej w 24 godziny.
               </p>
@@ -122,7 +122,7 @@ export default function QuoteContact() {
                 </div>
                 <div>
                   <p className="text-[9px] font-semibold tracking-[0.15em] text-primary/70 uppercase mb-0.5">Telefon</p>
-                  <p className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">504 810 841</p>
+                  <p className="font-semibold text-foreground group-hover:text-primary transition-colors text-[16px]">504 810 841</p>
                 </div>
               </a>
 
@@ -132,7 +132,7 @@ export default function QuoteContact() {
                 </div>
                 <div>
                   <p className="text-[9px] font-semibold tracking-[0.15em] text-primary/70 uppercase mb-0.5">E-mail</p>
-                  <p className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">elsen.materace@gmail.com</p>
+                  <p className="font-semibold text-foreground group-hover:text-primary transition-colors text-[16px]">elsen.materace@gmail.com</p>
                 </div>
               </a>
 
@@ -142,7 +142,7 @@ export default function QuoteContact() {
                 </div>
                 <div>
                   <p className="text-[9px] font-semibold tracking-[0.15em] text-[#25D366]/60 uppercase mb-0.5">WhatsApp</p>
-                  <p className="text-sm font-semibold text-foreground group-hover:text-[#25D366] transition-colors">Napisz do nas</p>
+                  <p className="font-semibold text-foreground group-hover:text-[#25D366] transition-colors text-[16px]">Napisz do nas</p>
                 </div>
               </a>
             </div>
