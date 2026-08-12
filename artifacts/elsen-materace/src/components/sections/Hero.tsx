@@ -39,8 +39,8 @@ export default function Hero() {
               src={logoPath}
               alt="ELSEN Materace — komfort, na który zasługujesz"
               className="h-[84px] md:h-[120px] w-auto object-contain drop-shadow-[0_0_30px_rgba(201,168,76,0.25)]"
-              width={700}
-              height={565}
+              width={693}
+              height={517}
               fetchPriority="high"
               decoding="async"
             />
