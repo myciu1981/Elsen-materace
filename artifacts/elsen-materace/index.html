@@ -27,8 +27,11 @@
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-    <!-- Font hostowany lokalnie — zero żądań do zewnętrznych domen i brak blokowania renderowania -->
+    <!-- Font hostowany lokalnie — zero żądań do zewnętrznych domen i brak blokowania renderowania.
+         Oba podzbiory, bo polskie znaki (ł, ą, ę, ś, ż, ź, ć, ń) są w latin-ext:
+         bez tego diakrytyki dociągają się później i układ przeskakuje. -->
     <link rel="preload" as="font" type="font/woff2" href="/fonts/montserrat-var-latin.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/montserrat-var-latin-ext.woff2" crossorigin />
 
     <!-- Klasa dodawana natychmiast: CSS ukrywa elementy do animacji tylko wtedy, gdy JavaScript działa.
          Bez niej prerenderowana treść jest w pełni widoczna dla robotów i użytkowników bez JS. -->

@@ -26,7 +26,26 @@ if (!fs.existsSync(serverEntry)) {
   process.exit(1);
 }
 
-const template = fs.readFileSync(templatePath, 'utf8');
+let template = fs.readFileSync(templatePath, 'utf8');
+
+/* Arkusz stylów blokuje renderowanie: przeglądarka nie pokaże nic, dopóki go nie pobierze.
+   Na telefonie kosztowało to kilka sekund. Wbudowujemy go w HTML — jedno żądanie mniej
+   na ścieżce krytycznej. Odwołania w CSS są absolutne (/fonts/...), więc działają bez zmian. */
+const linkRe = /<link[^>]*rel="stylesheet"[^>]*href="([^"]+\.css)"[^>]*>/;
+const linkMatch = template.match(linkRe);
+if (linkMatch) {
+  const cssPath = path.join(clientDir, linkMatch[1].replace(/^\//, ''));
+  if (fs.existsSync(cssPath)) {
+    const css = fs.readFileSync(cssPath, 'utf8').replace(/<\/style/gi, '<\\/style');
+    template = template.replace(linkRe, `<style>${css}</style>`);
+    console.log(`[prerender] CSS wbudowany w HTML (${(css.length / 1024).toFixed(1)} kB) — usunieto zadanie blokujace`);
+  } else {
+    console.warn(`[prerender] nie znaleziono ${cssPath} — CSS zostaje jako osobne zadanie`);
+  }
+} else {
+  console.warn('[prerender] nie znaleziono znacznika <link rel="stylesheet"> — pomijam wbudowanie CSS');
+}
+
 const { render } = await import(pathToFileURL(serverEntry).href);
 
 const PLACEHOLDER = '<div id="root"></div>';
