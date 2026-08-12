@@ -5,7 +5,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { Link } from 'wouter';
 import { toast } from 'sonner';
 import { useSubmitQuote } from '@workspace/api-client-react';
-import { Phone, Mail, MessageCircle, AlertCircle, Loader2 } from 'lucide-react';
+import { Phone, Mail, MessageCircle, Facebook, AlertCircle, Loader2 } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
@@ -146,6 +146,16 @@ export default function QuoteContact() {
                 <div>
                   <p className="text-[9px] font-semibold tracking-[0.15em] text-[#25D366]/60 uppercase mb-0.5">WhatsApp</p>
                   <p className="font-semibold text-foreground group-hover:text-[#25D366] transition-colors text-[16px]">Napisz do nas</p>
+                </div>
+              </a>
+
+              <a href="https://www.facebook.com/profile.php?id=61592419575226" target="_blank" rel="noreferrer" className="flex items-center gap-4 py-4 group">
+                <div className="w-10 h-10 rounded-full border border-[#1877F2]/20 flex items-center justify-center group-hover:border-[#1877F2] transition-colors shrink-0">
+                  <Facebook className="text-[#1877F2] w-4 h-4" />
+                </div>
+                <div>
+                  <p className="text-[9px] font-semibold tracking-[0.15em] text-[#1877F2]/60 uppercase mb-0.5">Facebook</p>
+                  <p className="font-semibold text-foreground group-hover:text-[#1877F2] transition-colors text-[16px]">Obserwuj nas</p>
                 </div>
               </a>
             </div>

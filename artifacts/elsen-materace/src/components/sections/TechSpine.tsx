@@ -8,7 +8,7 @@ import { LightboxImage } from '@/components/ui/LightboxImage';
 export default function TechSpine() {
   return (
     <>
-      <section className="py-12 md:py-16 bg-card border-y border-white/5">
+      <section id="co-jest-w-srodku" className="py-12 md:py-16 bg-card border-y border-white/5 scroll-mt-20">
         <div className="container mx-auto px-6 md:px-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

@@ -26,7 +26,7 @@ const features = [
 
 export default function AboutOffer() {
   return (
-    <section className="py-24 md:py-32 relative" style={{ backgroundColor: light.bg }}>
+    <section id="oferta" className="py-24 md:py-32 relative scroll-mt-20" style={{ backgroundColor: light.bg }}>
       <div className="container mx-auto px-6 md:px-12">
 
         {/* About Section */}

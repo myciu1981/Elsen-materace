@@ -20,12 +20,25 @@ export default function Footer() {
   return (
     <footer className="bg-card border-t border-card-border pt-16 pb-8">
       <div className="container mx-auto px-4 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div>
             <img src={logoPath} alt="ELSEN Materace" className="h-24 object-contain mb-4" />
             <p className="text-muted-foreground mb-2">Komfort, na który zasługujesz</p>
             <p className="text-sm text-muted-foreground/70">Polska produkcja · 24 miesiące gwarancji</p>
           </div>
+          {/* Col 2 – Nawigacja */}
+          <div>
+            <h4 className="text-xs font-semibold tracking-widest uppercase text-primary mb-5">Nawigacja</h4>
+            <ul className="space-y-3 text-sm text-muted-foreground">
+              <li><a href="#oferta" className="hover:text-primary transition-colors">Oferta</a></li>
+              <li><a href="#co-jest-w-srodku" className="hover:text-primary transition-colors">Co jest w środku</a></li>
+              <li><a href="#jak-to-dziala" className="hover:text-primary transition-colors">Jak to działa</a></li>
+              <li><a href="#dostawa" className="hover:text-primary transition-colors">Dostawa</a></li>
+              <li><a href="#kontakt" className="hover:text-primary transition-colors">Kontakt</a></li>
+            </ul>
+          </div>
+
+          {/* Col 3 – Linki */}
           <div className="md:text-right space-y-2 text-sm text-muted-foreground">
             <div className="flex flex-col md:items-end gap-3 mt-2">
               <Link href="/polityka-prywatnosci" className="hover:text-primary transition-colors">

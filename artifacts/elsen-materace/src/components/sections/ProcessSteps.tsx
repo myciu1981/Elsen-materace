@@ -27,7 +27,8 @@ const steps = [
 export default function ProcessSteps() {
   return (
     <section
-      className="py-24 md:py-32 relative"
+      id="jak-to-dziala"
+      className="py-24 md:py-32 relative scroll-mt-20"
       style={{ backgroundColor: 'hsl(var(--navy))' }}
     >
       <div className="container mx-auto px-6 md:px-12">
