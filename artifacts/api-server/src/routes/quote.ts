@@ -4,7 +4,9 @@ import { SubmitQuoteBody, SubmitQuoteResponse } from "@workspace/api-zod";
 
 const router: IRouter = Router();
 
-const COMPANY_EMAIL = "elsen.materace@gmail.com";
+// Temporary: Resend sandbox sends only to the Resend account owner email.
+// Switch back to elsen.materace@gmail.com after domain verification (task #15).
+const COMPANY_EMAIL = "jacekpierwszyy@gmail.com";
 const COMPANY_PHONE = "504 810 841";
 const WHATSAPP_LINK = "https://wa.me/48504810841";
 
@@ -92,8 +94,9 @@ router.post("/quote", async (req, res): Promise<void> => {
   const resend = new Resend(resendApiKey);
 
   // Send notification email to the owner
+  // NOTE: "from" uses Resend sandbox sender until elsen-materace.pl domain is verified (task #15)
   const ownerEmailResult = await resend.emails.send({
-    from: "noreply@elsen-materace.pl",
+    from: "ELSEN Materace <onboarding@resend.dev>",
     to: COMPANY_EMAIL,
     subject: `Nowe zapytanie o wycenę: ${width}×${length} cm`,
     text: buildOwnerEmail({ width, length, phone, email, notes }),
