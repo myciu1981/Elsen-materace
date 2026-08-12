@@ -53,8 +53,8 @@ export default function TechSpine() {
               </div>
             </div>
 
-            {/* Relative wrapper — zero intrinsic height so left column drives row height */}
-            <div className="relative">
+            {/* Relative wrapper — min-h on mobile so image is visible; lg resets to 0 so left column drives height */}
+            <div className="relative min-h-[280px] lg:min-h-0">
               <div className="absolute inset-0 overflow-hidden flex items-start">
                 <LightboxImage
                   src={techImage}
