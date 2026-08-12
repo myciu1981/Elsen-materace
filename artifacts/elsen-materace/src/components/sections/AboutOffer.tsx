@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Ruler, SlidersHorizontal, Layers, User } from 'lucide-react';
-import aboutImg from "@assets/ChatGPT_Image_9_sie_2026,_15_43_58_1786409178370.png";
+import aboutImg from "@assets/ChatGPT_Image_9_sie_2026,_15_43_58_1786409178370.webp";
 import { LightboxImage } from '@/components/ui/LightboxImage';
 
 // Light-section colour tokens (inline so they work without Tailwind config changes)
@@ -69,6 +69,8 @@ export default function AboutOffer() {
             />
             <LightboxImage
               src={aboutImg}
+              width={1536}
+              height={1024}
               alt="Jasna minimalistyczna sypialnia z materacem"
               className="relative z-10 w-full h-auto object-cover rounded-sm hover:grayscale-0 transition-all duration-700 shadow-2xl"
             />

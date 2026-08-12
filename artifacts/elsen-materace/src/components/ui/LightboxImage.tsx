@@ -5,9 +5,12 @@ interface LightboxImageProps {
   src: string;
   alt: string;
   className?: string;
+  /** Wymiary źródłowe — bez nich przeglądarka nie rezerwuje miejsca i układ skacze przy ładowaniu. */
+  width?: number;
+  height?: number;
 }
 
-export function LightboxImage({ src, alt, className = '' }: LightboxImageProps) {
+export function LightboxImage({ src, alt, className = '', width, height }: LightboxImageProps) {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -26,7 +29,15 @@ export function LightboxImage({ src, alt, className = '' }: LightboxImageProps) 
   return (
     <>
       <div className="relative group cursor-zoom-in h-full" onClick={() => setOpen(true)}>
-        <img src={src} alt={alt} className={className} />
+        <img
+          src={src}
+          alt={alt}
+          className={className}
+          width={width}
+          height={height}
+          loading="lazy"
+          decoding="async"
+        />
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-sm flex items-center justify-center">
           <ZoomIn
             size={32}

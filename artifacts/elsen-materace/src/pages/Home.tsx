@@ -8,42 +8,22 @@ import Testimonials from '@/components/sections/Testimonials';
 import Gallery from '@/components/sections/Gallery';
 import QuoteContact from '@/components/sections/QuoteContact';
 
+// Kotwice (#oferta, #co-jest-w-srodku, #jak-to-dziala, #dostawa, #wycena) są zdefiniowane
+// wewnątrz samych sekcji, razem z klasą scroll-mt-20. Opakowywanie ich tutaj w <div>
+// o tym samym id tworzyło zduplikowane identyfikatory w dokumencie.
 export default function Home() {
   return (
     <>
       <Hero />
-
-      {/* Oferta + O nas */}
-      <div id="oferta">
-        <AboutOffer />
-      </div>
-
-      {/* Co jest w środku */}
-      <div id="co-jest-w-srodku">
-        <TechSpine />
-      </div>
-
-      {/* Jak to działa */}
-      <div id="jak-to-dziala">
-        <ProcessSteps />
-      </div>
-
-      {/* Dostawa */}
-      <div id="dostawa">
-        <Delivery />
-      </div>
-
-      {/* Opinie klientów */}
+      <AboutOffer />
+      <TechSpine />
+      <ProcessSteps />
+      <Delivery />
       <Testimonials />
-
       <Gallery />
+      <QuoteContact />
 
-      {/* Wycena */}
-      <div id="wycena">
-        <QuoteContact />
-      </div>
-
-      {/* Spacer for mobile bottom nav */}
+      {/* Odstęp pod przyklejony pasek nawigacji na telefonie */}
       <div className="h-24 md:hidden" aria-hidden="true" />
     </>
   );

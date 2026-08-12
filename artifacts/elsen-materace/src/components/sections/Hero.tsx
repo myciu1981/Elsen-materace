@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import heroImage from '@assets/ELSEN_main_1786409153785.png';
-import logoPath from '@assets/ELSEN_logo_z_hasłem_1786460307242.png';
+import heroImage from '@assets/ELSEN_main_1786409153785.webp';
+import logoPath from '@assets/ELSEN_logo_z_hasłem_1786463523409.webp';
 
 export default function Hero() {
   return (
@@ -12,6 +12,10 @@ export default function Hero() {
           src={heroImage}
           alt="Ciemna luksusowa sypialnia z materacem Elsen Premium"
           className="w-full h-full object-cover object-center"
+          width={1536}
+          height={1024}
+          fetchPriority="high"
+          decoding="async"
         />
         {/* Reduced opacity gradients to let photo breathe more */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/15" />
@@ -33,8 +37,12 @@ export default function Hero() {
           >
             <img
               src={logoPath}
-              alt="ELSEN Materace"
+              alt="ELSEN Materace — komfort, na który zasługujesz"
               className="h-[84px] md:h-[120px] object-contain drop-shadow-[0_0_30px_rgba(201,168,76,0.25)]"
+              width={700}
+              height={565}
+              fetchPriority="high"
+              decoding="async"
             />
           </motion.div>
 

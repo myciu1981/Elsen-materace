@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'wouter';
-import logoPath from '@assets/ELSEN_logo_z_hasłem_1786463523409.png';
+import logoPath from '@assets/ELSEN_logo_z_hasłem_1786463523409.webp';
 
 function FacebookIcon() {
   return (
@@ -22,7 +22,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div>
-            <img src={logoPath} alt="ELSEN Materace" className="h-24 object-contain mb-4" />
+            <img src={logoPath} alt="ELSEN Materace" className="h-24 object-contain mb-4" width={700} height={565} loading="lazy" decoding="async" />
             <p className="text-muted-foreground mb-2">Komfort, na który zasługujesz</p>
             <p className="text-sm text-muted-foreground/70">Polska produkcja · 24 miesiące gwarancji</p>
           </div>

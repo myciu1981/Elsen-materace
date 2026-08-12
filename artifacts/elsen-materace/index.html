@@ -2,46 +2,203 @@
 <html lang="pl">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <!-- bez maximum-scale — blokowanie powiększania łamie dostępność -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Materace na wymiar — ELSEN Materace, Nowy Tomyśl</title>
-    <meta name="description" content="Materace tworzone ręcznie na wymiar. Sprężyny kieszeniowe, pianki wysokiej gęstości, twardość dobierana indywidualnie. Realizacja do 14 dni. Wielkopolska." />
-    <meta name="robots" content="index, follow" />
+    <meta name="description" content="Materace tworzone ręcznie na wymiar. Sprężyny kieszeniowe, pianki wysokiej gęstości, mata kokosowa, twardość dobierana indywidualnie. Realizacja do 14 dni. Wielkopolska." />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <link rel="canonical" href="https://www.elsen.com.pl/" />
+
+    <meta property="og:site_name" content="ELSEN Materace" />
     <meta property="og:title" content="ELSEN Materace — komfort, na który zasługujesz" />
-    <meta property="og:description" content="Materace na wymiar, szyte ręcznie w Wielkopolsce. Sprężyny kieszeniowe, dobór twardości pod Twoją wagę i sposób spania. Bezpłatna wycena." />
+    <meta property="og:description" content="Materace na wymiar, tworzone ręcznie w Wielkopolsce. Sprężyny kieszeniowe, dobór twardości pod Twoją wagę i sposób spania. Bezpłatna wycena." />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pl_PL" />
+    <meta property="og:url" content="https://www.elsen.com.pl/" />
+    <meta property="og:image" content="https://www.elsen.com.pl/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Materac ELSEN Premium w ciemnej sypialni" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="ELSEN Materace — komfort, na który zasługujesz" />
-    <meta name="twitter:description" content="Materace na wymiar, szyte ręcznie w Wielkopolsce. Bezpłatna wycena." />
+    <meta name="twitter:description" content="Materace na wymiar, tworzone ręcznie w Wielkopolsce. Bezpłatna wycena." />
+    <meta name="twitter:image" content="https://www.elsen.com.pl/og-image.jpg" />
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <!-- Font hostowany lokalnie — zero żądań do zewnętrznych domen i brak blokowania renderowania -->
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/montserrat-var-latin.woff2" crossorigin />
+
+    <!-- Klasa dodawana natychmiast: CSS ukrywa elementy do animacji tylko wtedy, gdy JavaScript działa.
+         Bez niej prerenderowana treść jest w pełni widoczna dla robotów i użytkowników bez JS. -->
+    <script>document.documentElement.classList.add('js');</script>
+    <noscript>
+      <style>[style*="opacity:0"]{opacity:1!important;transform:none!important}</style>
+    </noscript>
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "ELSEN Materace",
-      "description": "Producent materacy premium szytych ręcznie na wymiar w Wielkopolsce. Sprężyny kieszeniowe, pianki wysokiej gęstości, twardość dobierana indywidualnie.",
-      "telephone": "+48504810841",
-      "email": "elsen.materace@gmail.com",
-      "url": "https://www.elsen-materace.pl",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Nowy Tomyśl",
-        "addressRegion": "Wielkopolska",
-        "addressCountry": "PL"
-      },
-      "areaServed": [
-        "Nowy Tomyśl",
-        "Poznań",
-        "Leszno",
-        "Wolsztyn",
-        "Grodzisk Wielkopolski",
-        "Polska"
-      ],
-      "sameAs": [
-        "https://www.facebook.com/profile.php?id=61592419575226"
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://www.elsen.com.pl/#firma",
+          "name": "ELSEN Materace",
+          "description": "Manufaktura materacy sprężynowo-piankowych szytych ręcznie na wymiar w Wielkopolsce. Sprężyny kieszeniowe, pianki wysokiej gęstości, mata kokosowa, twardość dobierana indywidualnie do wagi i pozycji spania.",
+          "url": "https://www.elsen.com.pl/",
+          "image": "https://www.elsen.com.pl/og-image.jpg",
+          "telephone": "+48504810841",
+          "email": "elsen.materace@gmail.com",
+          "priceRange": "$$",
+          "currenciesAccepted": "PLN",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Nowy Tomyśl",
+            "addressRegion": "Wielkopolska",
+            "addressCountry": "PL"
+          },
+          "areaServed": [
+            { "@type": "City", "name": "Nowy Tomyśl" },
+            { "@type": "City", "name": "Poznań" },
+            { "@type": "City", "name": "Leszno" },
+            { "@type": "City", "name": "Wolsztyn" },
+            { "@type": "City", "name": "Grodzisk Wielkopolski" },
+            { "@type": "City", "name": "Stęszew" },
+            { "@type": "Country", "name": "Polska" }
+          ],
+          "knowsLanguage": "pl",
+          "sameAs": ["https://www.facebook.com/profile.php?id=61592419575226"]
+        },
+        {
+          "@type": "Product",
+          "@id": "https://www.elsen.com.pl/#materac",
+          "name": "Materac sprężynowo-piankowy ELSEN na wymiar",
+          "description": "Materac wykonywany ręcznie na indywidualne zamówienie. Blok sprężyn kieszeniowych 12 cm z drutu 1,8 mm, mata kokosowa, cztery rodzaje pianek o różnej gęstości. Twardość i wymiary dobierane do wagi, wzrostu i pozycji spania.",
+          "image": "https://www.elsen.com.pl/og-image.jpg",
+          "brand": { "@type": "Brand", "name": "ELSEN Materace" },
+          "manufacturer": { "@id": "https://www.elsen.com.pl/#firma" },
+          "countryOfOrigin": "PL",
+          "category": "Materace",
+          "material": "Sprężyny kieszeniowe, pianka HR, mata kokosowa, filc",
+          "additionalProperty": [
+            { "@type": "PropertyValue", "name": "Pokrowiec", "value": "Tkanina materacowa na owacie 200 g" },
+            { "@type": "PropertyValue", "name": "Pianka HR3538", "value": "2 cm" },
+            { "@type": "PropertyValue", "name": "Pianka HR4038 hybryda", "value": "3 cm" },
+            { "@type": "PropertyValue", "name": "Pianka T40", "value": "3 cm" },
+            { "@type": "PropertyValue", "name": "Mata kokosowa", "value": "1,5 cm" },
+            { "@type": "PropertyValue", "name": "Sprężyna kieszeniowa", "value": "12 cm wysokości, drut 1,8 mm" },
+            { "@type": "PropertyValue", "name": "Obwód z pianki T40", "value": "12 cm wysokości x 7 cm szerokości" },
+            { "@type": "PropertyValue", "name": "Pianka T25", "value": "2 cm" },
+            { "@type": "PropertyValue", "name": "Gwarancja", "value": "24 miesiące" },
+            { "@type": "PropertyValue", "name": "Termin realizacji", "value": "do 14 dni" }
+          ],
+          "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "priceCurrency": "PLN",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "priceCurrency": "PLN",
+              "valueAddedTaxIncluded": true
+            },
+            "seller": { "@id": "https://www.elsen.com.pl/#firma" },
+            "areaServed": "PL",
+            "deliveryLeadTime": { "@type": "QuantitativeValue", "maxValue": 14, "unitCode": "DAY" }
+          },
+          "review": [
+            {
+              "@type": "Review",
+              "author": { "@type": "Person", "name": "Wojtek" },
+              "reviewBody": "Wreszcie się wyspałem! Nie zapada się po kilku miesiącach, twardość jest idealna. Czuć jakość wykonania."
+            },
+            {
+              "@type": "Review",
+              "author": { "@type": "Person", "name": "Adam" },
+              "reviewBody": "Pierwsza noc była dziwna, ale kolejne niesamowite. Nie zdawałem sobie sprawy, że spałem na tak słabym materacu. Warto zainwestować w zdrowie."
+            },
+            {
+              "@type": "Review",
+              "author": { "@type": "Person", "name": "Jadwiga" },
+              "reviewBody": "Miałam wątpliwości, bo materac nie z markowego sklepu. Po tygodniu wiem, że warto było. Manufaktura, dbałość o szczegóły, produkt dla wymagających."
+            },
+            {
+              "@type": "Review",
+              "author": { "@type": "Person", "name": "Adrian" },
+              "reviewBody": "Tyle miesięcy bolały mnie plecy, najgorzej rano. Zawsze myślałem, że miękki materac znaczy wygodny. Twardość materaca Elsen jest idealnie dobrana."
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://www.elsen.com.pl/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Czy robicie materace na wymiar?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak. Każdy materac powstaje na indywidualne zamówienie, w dowolnym wymiarze — również nietypowym, jak poddasze, kamper czy stare łóżko. Wykonujemy też standardowe rozmiary."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak dobieracie twardość materaca?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Twardości nie wybiera się z listy H1–H4. Ustalamy ją w rozmowie na podstawie wagi, wzrostu, pozycji spania i tego, co przeszkadzało w dotychczasowym materacu."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Z czego zbudowany jest materac ELSEN?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Rdzeniem jest blok sprężyn kieszeniowych o wysokości 12 cm z drutu 1,8 mm, obudowany pianką T40. Nad nim mata kokosowa 1,5 cm, filc 500 g oraz warstwy pianek: T40 3 cm, HR4038 hybryda 3 cm i HR3538 2 cm. Od spodu filc 500 g i pianka T25 2 cm. Całość w pokrowcu z tkaniny materacowej na owacie 200 g."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ile trwa realizacja zamówienia?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Do 14 dni od potwierdzenia zamówienia, zależnie od sezonu. W salonach meblowych materac na zamówienie to zwykle 4–6 tygodni."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy dowozicie materac?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "W promieniu 100 km od Nowego Tomyśla dowozimy własnym transportem — obejmuje to m.in. Poznań, Leszno, Wolsztyn, Grodzisk Wielkopolski i Zieloną Górę. Poza tym obszarem wysyłamy kurierem na terenie całej Polski. Możliwy jest też odbiór osobisty."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ile kosztuje materac na wymiar?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Cena zależy od wymiarów, wysokości i konfiguracji warstw, dlatego wyceniamy każde zamówienie indywidualnie. Wycena jest bezpłatna i do niczego nie zobowiązuje — odpowiadamy zwykle w ciągu kilku godzin, najpóźniej w 24 godziny."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jaka jest gwarancja na materac?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "24 miesiące. Materac wykonuje mistrz tapicerstwa z ponad dwudziestoletnim doświadczeniem, a reklamacje obsługujemy bezpośrednio w pracowni."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.elsen.com.pl/#strona",
+          "url": "https://www.elsen.com.pl/",
+          "name": "ELSEN Materace",
+          "inLanguage": "pl-PL",
+          "publisher": { "@id": "https://www.elsen.com.pl/#firma" }
+        }
       ]
     }
     </script>

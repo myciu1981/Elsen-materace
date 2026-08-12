@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import techImage from '@assets/ChatGPT_Image_10_sie_2026,_21_42_40_1786419810337.png';
-import spineImage from '@assets/ChatGPT_Image_3_sie_2026,_08_00_12_1785777081433.png';
+import techImage from '@assets/ChatGPT_Image_10_sie_2026,_21_42_40_1786419810337.webp';
+import spineImage from '@assets/ChatGPT_Image_3_sie_2026,_08_00_12_1785777081433.webp';
 import { Activity, ShieldCheck, Heart } from 'lucide-react';
 import { LightboxImage } from '@/components/ui/LightboxImage';
 
@@ -58,6 +58,8 @@ export default function TechSpine() {
               <div className="absolute inset-0 overflow-hidden flex items-start">
                 <LightboxImage
                   src={techImage}
+                  width={1024}
+                  height={1536}
                   alt="Przekrój warstw materaca ELSEN"
                   className="w-full h-full object-contain object-top rounded-sm block shadow-2xl"
                 />
@@ -121,6 +123,8 @@ export default function TechSpine() {
               <div className="bg-background border border-white/8 rounded-sm p-6 md:p-8 shadow-2xl">
                 <LightboxImage
                   src={spineImage}
+                  width={1536}
+                  height={1024}
                   alt="Prawidłowe i nieprawidłowe ułożenie kręgosłupa"
                   className="w-full h-auto rounded-sm block"
                 />

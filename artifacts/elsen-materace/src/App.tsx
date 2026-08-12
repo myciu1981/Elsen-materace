@@ -18,10 +18,15 @@ function NotFound() {
   );
 }
 
-function App() {
+interface AppProps {
+  /** Ustawiane wyłącznie przy prerenderowaniu — w przeglądarce trasę czyta wouter z adresu. */
+  ssrPath?: string;
+}
+
+function App({ ssrPath }: AppProps) {
   return (
     <QueryClientProvider client={queryClient}>
-      <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, '')}>
+      <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, '')} ssrPath={ssrPath}>
         <Layout>
           <Switch>
             <Route path="/" component={Home} />
