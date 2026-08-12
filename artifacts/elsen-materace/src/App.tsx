@@ -4,6 +4,7 @@ import Layout from '@/components/layout/Layout';
 import Home from '@/pages/Home';
 import Thanks from '@/pages/Thanks';
 import Privacy from '@/pages/Privacy';
+import { Toaster } from 'sonner';
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ function App() {
           </Switch>
         </Layout>
       </WouterRouter>
+      <Toaster position="bottom-center" richColors />
     </QueryClientProvider>
   );
 }

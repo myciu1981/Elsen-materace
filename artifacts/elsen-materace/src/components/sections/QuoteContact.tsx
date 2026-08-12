@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useLocation, Link } from 'wouter';
+import { Link } from 'wouter';
+import { toast } from 'sonner';
 import { useSubmitQuote } from '@workspace/api-client-react';
 import { Phone, Mail, MessageCircle, AlertCircle, Loader2 } from 'lucide-react';
 import { Input } from '@/components/ui/input';
@@ -33,12 +34,11 @@ const quoteSchema = z.object({
 type QuoteFormValues = z.infer<typeof quoteSchema>;
 
 export default function QuoteContact() {
-  const [_, setLocation] = useLocation();
   const submitQuote = useSubmitQuote();
   const [errorMsg, setErrorMsg] = useState("");
   const [cooldown, setCooldown] = useState(0);
 
-  const { register, handleSubmit, watch, setValue, formState: { errors } } = useForm<QuoteFormValues>({
+  const { register, handleSubmit, watch, setValue, reset, formState: { errors } } = useForm<QuoteFormValues>({
     resolver: zodResolver(quoteSchema),
     defaultValues: {
       width: "",
@@ -81,7 +81,10 @@ export default function QuoteContact() {
     }, {
       onSuccess: () => {
         setCooldown(60);
-        setLocation('/dziekujemy');
+        reset();
+        toast.success('Zapytanie wysłane. Skontaktujemy się wkrótce.', {
+          duration: 6000,
+        });
       },
       onError: () => {
         setErrorMsg("Nie udało się wysłać. Napisz na WhatsApp albo zadzwoń — odpowiemy tak samo szybko.");
