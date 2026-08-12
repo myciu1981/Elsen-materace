@@ -229,7 +229,7 @@ export default function QuoteContact() {
                 <div>
                   <Label htmlFor="rodo" className="text-[11px] font-normal text-muted-foreground leading-relaxed cursor-pointer select-none">
                     Wyrażam zgodę na przetwarzanie moich danych osobowych w celu przygotowania wyceny i kontaktu w tej sprawie.{' '}
-                    Administratorem danych jest [NAZWA FIRMY], [ADRES], NIP [NIP]. Dane przetwarzamy wyłącznie w celu odpowiedzi na Twoje zapytanie, na podstawie Twojej zgody. Przechowujemy je przez 12 miesięcy od ostatniego kontaktu. Masz prawo dostępu do danych, ich poprawienia, usunięcia oraz wycofania zgody w dowolnym momencie. Szczegóły w{' '}
+                    Administratorem danych jest ELSEN. Dane przetwarzamy wyłącznie w celu odpowiedzi na Twoje zapytanie, na podstawie Twojej zgody. Przechowujemy je przez 12 miesięcy od ostatniego kontaktu. Masz prawo dostępu do danych, ich poprawienia, usunięcia oraz wycofania zgody w dowolnym momencie. Szczegóły w{' '}
                     <Link href="/polityka-prywatnosci" className="text-primary hover:underline">polityce prywatności</Link>.
                   </Label>
                   {errors.rodo && <p className="text-destructive text-[10px] mt-1">{errors.rodo.message}</p>}
