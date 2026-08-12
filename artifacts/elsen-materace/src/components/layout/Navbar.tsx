@@ -58,7 +58,7 @@ export default function Navbar() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }}
         >
-          <img src={logoPath} alt="ELSEN Materace" className="h-8 object-contain" width={700} height={455} decoding="async" />
+          <img src={logoPath} alt="ELSEN Materace" className="h-8 w-auto object-contain" width={700} height={455} decoding="async" />
         </Link>
         <a
           href="tel:504810841"
@@ -91,7 +91,7 @@ export default function Navbar() {
             <img
               src={logoPath}
               alt="ELSEN Materace"
-              className="h-10 object-contain group-hover:opacity-80 transition-opacity"
+              className="h-10 w-auto object-contain group-hover:opacity-80 transition-opacity"
               width={700}
               height={455}
               decoding="async"
