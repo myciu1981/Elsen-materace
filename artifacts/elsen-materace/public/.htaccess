@@ -1,0 +1,75 @@
+# ELSEN Materace — konfiguracja Apache na cPanelu (nethero).
+# Plik leży w `public/`, więc Vite kopiuje go do `dist/public` i wdrożenie
+# wynosi go do katalogu domeny. Poprawki nanosić TUTAJ, nie na serwerze —
+# każde wdrożenie nadpisuje wersję serwerową.
+
+# Hosting oddaje 403 crawlerom AI (ClaudeBot, GPTBot, PerplexityBot, CCBot)
+# na poziomie konfiguracji serwera, poza cPanelem. To zdejmuje tę blokadę.
+<IfModule mod_authz_core.c>
+    Require all granted
+</IfModule>
+
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # HTTPS. Za Cloudflare połączenie do serwera bywa po HTTP mimo że
+    # użytkownik jest na HTTPS — bez sprawdzenia X-Forwarded-Proto powstaje
+    # nieskończona pętla przekierowań przy trybie SSL innym niż Full.
+    RewriteCond %{HTTPS} off
+    RewriteCond %{HTTP:X-Forwarded-Proto} !https [NC]
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Kanoniczny adres jest bez www.
+    RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+    RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+    # Formularz wyceny. Front woła /api/quote — na Replicie obsługiwał to
+    # Express, tutaj robi to PHP. Adres zostaje ten sam, front bez zmian.
+    RewriteRule ^api/quote/?$ /api/quote.php [L]
+</IfModule>
+
+# Trasy są prerenderowane do katalogów z index.html, więc Apache serwuje je sam.
+# Nieznany adres ma dawać prawdziwe 404, a nie stronę główną ze statusem 200.
+ErrorDocument 404 /404.html
+
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml \
+        application/javascript application/json application/xml \
+        image/svg+xml application/rss+xml
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), interest-cohort=()"
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=HTTPS
+
+    # Nazwy w assets/ niosą skrót treści, a fonty się nie zmieniają — rok bez odświeżania.
+    # Pozostałe obrazy (og-image.jpg, favicon) mają stałe nazwy, więc dostają tydzień:
+    # przy „immutable" podmiana grafiki nie dotarłaby przez rok do stałych gości.
+    SetEnvIf Request_URI "^/(assets|fonts)/" LONG_CACHE
+    Header set Cache-Control "public, max-age=31536000, immutable" env=LONG_CACHE
+
+    <FilesMatch "\.(webp|jpg|jpeg|png|svg|ico|gif)$">
+        Header set Cache-Control "public, max-age=604800" env=!LONG_CACHE
+    </FilesMatch>
+
+    # HTML ma być zawsze świeży — inaczej wdrożenie nie dotarłoby do stałych gości.
+    <FilesMatch "\.(html|xml|txt)$">
+        Header set Cache-Control "no-cache, must-revalidate"
+    </FilesMatch>
+
+    <FilesMatch "^quote\.php$">
+        Header set Cache-Control "no-store"
+    </FilesMatch>
+</IfModule>
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+AddType application/manifest+json .webmanifest
+AddDefaultCharset UTF-8

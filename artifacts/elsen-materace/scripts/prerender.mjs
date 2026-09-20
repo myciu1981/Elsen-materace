@@ -8,12 +8,17 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const clientDir = path.join(root, 'dist', 'public');
 const serverEntry = path.join(root, 'dist', 'server', 'entry-server.js');
 
-// Trasa -> plik wyjściowy. Strona główna nadpisuje index.html,
-// pozostałe trafiają do własnych katalogów, żeby serwer statyczny je znalazł.
+const ORIGIN = 'https://elsen.com.pl';
+
+// Trasa -> plik wyjściowy i adres kanoniczny. Szablon niesie kanoniczny adres strony
+// głównej, więc bez podmiany każda podstrona wskazywałaby na "/" i wypadałaby z indeksu.
+// `canonical: null` znaczy: usuń znacznik — 404 i strona podziękowania nie mają być indeksowane.
 const ROUTES = [
-  { url: '/', out: 'index.html' },
-  { url: '/dziekujemy', out: path.join('dziekujemy', 'index.html') },
-  { url: '/polityka-prywatnosci', out: path.join('polityka-prywatnosci', 'index.html') },
+  { url: '/', out: 'index.html', canonical: `${ORIGIN}/` },
+  { url: '/dziekujemy', out: path.join('dziekujemy', 'index.html'), canonical: null, noindex: true },
+  { url: '/polityka-prywatnosci', out: path.join('polityka-prywatnosci', 'index.html'), canonical: `${ORIGIN}/polityka-prywatnosci/` },
+  // Serwowana przez Apache jako ErrorDocument 404 — stąd plik w korzeniu, nie katalog.
+  { url: '/404', out: '404.html', canonical: null, noindex: true },
 ];
 
 const templatePath = path.join(clientDir, 'index.html');
@@ -54,9 +59,25 @@ if (!template.includes(PLACEHOLDER)) {
   process.exit(1);
 }
 
-for (const { url, out } of ROUTES) {
+const CANONICAL_RE = /\s*<link rel="canonical" href="[^"]*" \/>/;
+const OG_URL_RE = /(<meta property="og:url" content=")[^"]*(" \/>)/;
+const ROBOTS_RE = /(<meta name="robots" content=")[^"]*(" \/>)/;
+
+for (const { url, out, canonical, noindex } of ROUTES) {
   const appHtml = render(url);
-  const html = template.replace(PLACEHOLDER, `<div id="root">${appHtml}</div>`);
+  let html = template.replace(PLACEHOLDER, `<div id="root">${appHtml}</div>`);
+
+  if (canonical) {
+    html = html.replace(CANONICAL_RE, `
+    <link rel="canonical" href="${canonical}" />`);
+    html = html.replace(OG_URL_RE, `$1${canonical}$2`);
+  } else {
+    html = html.replace(CANONICAL_RE, '');
+  }
+
+  if (noindex) {
+    html = html.replace(ROBOTS_RE, '$1noindex, follow$2');
+  }
   const dest = path.join(clientDir, out);
   fs.mkdirSync(path.dirname(dest), { recursive: true });
   fs.writeFileSync(dest, html, 'utf8');
