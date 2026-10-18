@@ -1,10 +1,11 @@
-# ELSEN Materace — konfiguracja Apache na cPanelu (nethero).
+# ELSEN Materace — konfiguracja Apache na cPanelu (SmartHost).
 # Plik leży w `public/`, więc Vite kopiuje go do `dist/public` i wdrożenie
 # wynosi go do katalogu domeny. Poprawki nanosić TUTAJ, nie na serwerze —
 # każde wdrożenie nadpisuje wersję serwerową.
 
-# Hosting oddaje 403 crawlerom AI (ClaudeBot, GPTBot, PerplexityBot, CCBot)
-# na poziomie konfiguracji serwera, poza cPanelem. To zdejmuje tę blokadę.
+# Pozwala na dostęp wszystkim robotom, w tym crawlerom AI (ClaudeBot, GPTBot,
+# PerplexityBot, CCBot). Na NetHero serwer oddawał im 403 poza cPanelem;
+# na SmartHost sprawdzone: odpowiadają 200 (poza Bytespiderem).
 <IfModule mod_authz_core.c>
     Require all granted
 </IfModule>
